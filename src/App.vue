@@ -6,13 +6,32 @@
 </template>
 
 <script>
-import HelloWorld from './pages/Default.vue'
+import Home from './pages/Home.vue'
+import Login from './pages/Login.vue'
+import Dashboard from './pages/Dashboard.vue'
+
+const routes = {
+  '/': Home,
+  '/login': Login,
+  '/dashboard': Dashboard
+}
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Home,
+    Login,
+    Dashboard
+  },
+  data: {
+    currentRoute: window.location.pathname
+  },
+  computed: {
+    ViewComponent () {
+      return routes[this.currentRoute]
+    }
+  },
+  render (h) { return h(this.ViewComponent) }
 }
 </script>
 
