@@ -15,7 +15,7 @@ const app = firebase.initializeApp(firebaseConfig);
 const firebaseFunctions = app.functions();
 firebaseFunctions.useEmulator('localhost', 5001);
 
-export async function helloWorld(): Promise<void> {
+export async function helloWorld() {
   const res = await firebaseFunctions.httpsCallable('helloWorld')({});
   console.log(res);
 }
