@@ -10,7 +10,13 @@ const functions = require("firebase-functions");
 
 // export const helloWorld = functions.https.onCall((data, context) => {
 
-exports.helloWorld = functions.https.onCall((data, context) => {
-    return { text: 'Hello from Firebase!' };
-});
+// exports.helloWorld = functions.https.onCall((data, context) => {
+//     return { text: 'Hello from Firebase!' };
+// });
 
+exports.test = functions.https.onCall(async (data, context) => {
+    await firestoreDB.collection('foo').doc('bar').set({
+      test: `this is a test`,
+    });
+    return { text: 'Hello test from Firebase!' };
+});
