@@ -15,8 +15,42 @@
           min-width="100"
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
           width="100"
-        /> -->
+        /> 
         
+      // clear () {
+      //   this.$v.$reset()
+      //   this.name = ''
+      //   this.email = ''
+      //   this.select = null
+      //   this.checkbox = false
+      // },
+
+
+
+      <v-btn @click="clear">clear</v-btn>
+
+
+// <v-checkbox
+//         v-model="checkbox"
+//         :error-messages="checkboxErrors"
+//         label="Show password"
+//         @change="$v.checkbox.$touch()"
+//         @blur="$v.checkbox.$touch()"
+//       ></v-checkbox>
+
+
+
+
+<!-- <v-text-field
+        v-model="email"
+        :error-messages="emailErrors"
+        label="Password"
+        required
+        @input="$v.email.$touch()"
+        @blur="$v.email.$touch()"
+      ></v-text-field> -->
+
+
         <!-- <v-img
           alt="Calico Name"
           class="shrink mt-1 hidden-sm-and-down"
@@ -25,7 +59,15 @@
           src=""
           width="100"
         /> -->
-        
+             <!-- <v-text-field
+        v-model="name"
+        :error-messages="nameErrors"
+        :counter="10"
+        label="Name"
+        required
+        @input="$v.name.$touch()"
+        @blur="$v.name.$touch()"
+      ></v-text-field> --> 
 
 
 <!-- <v-btn

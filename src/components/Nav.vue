@@ -16,5 +16,12 @@ export default {
 .nav-link {
     text-decoration: none;
     margin: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    &:hover{
+        color: rgb(65, 65, 65);
+    }
 }
 </style>
