@@ -1,31 +1,24 @@
 <template>
-  <div class="header">
-    <router-link class="link" to="/">Home</router-link>
-    <router-link class="link" to="/login">Login</router-link>
-    
-
-  </div>
+    <v-app-bar
+        app
+        color="blue lighten-3"
+        dark
+    >
+        <Logo />
+        <v-spacer></v-spacer>
+        <Nav />
+    </v-app-bar>
 </template>
 
 <script>
+import Nav from './Nav.vue'
+import Logo from './Logo.vue'
+
 export default {
-  name: 'Header',
+    name: 'Header',
+    components: {
+        Nav,
+        Logo
+    }
 }
 </script>
-
-<style scoped>
-.header {
-    height: 70px;
-    background: linear-gradient(to right, #5a99ff, #e4eeff) no-repeat;
-    /* background: linear-gradient(to right, #5a99ff, #BBD5FF) no-repeat; */
-    /* background: linear-gradient(to bottom, #BBD5FF, #FFFFFF) no-repeat; */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    padding: 10px;
-}
-.link {
-    margin: 8px;
-}
-</style>
