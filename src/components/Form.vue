@@ -110,6 +110,8 @@
     methods: {
       submit () {
         this.$v.$touch()
+        this.$store.commit('updateUser', this.select)
+        this.$store.commit('loggedInLink', 'Logout')
         this.$router.push('/dashboard')
       },
     },
