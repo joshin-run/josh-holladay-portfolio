@@ -203,3 +203,68 @@ export default new Vuex.Store({
 //     commit('gotOtherData', await getOtherData())
 //   }
 // }
+
+
+
+
+
+
+//
+// exports.helloWorld = functions.https.onRequest((request, response) => {
+//   functions.logger.info("Hello logs!", {structuredData: true});
+//   response.send("Hello from Firebase!");
+// });
+
+// exports.getFBData = functions.https.onCall( (data, context) => {
+//     console.log('base getFBData func')
+//     firebase.database.ref('settings/setting').on('value', (snapshot) => {
+//         console.log('snapshot', snapshot.val())
+//         return snapshot.val()
+//     })
+// });
+
+
+
+
+// export const helloWorld = functions.https.onCall((data, context) => {
+
+// exports.helloWorld = functions.https.onCall((data, context) => {
+//     return { text: 'Hello from Firebase!' };
+// });
+
+// exports.test = functions.https.onCall(async (data, context) => {
+//     await firestoreDB.collection('users').doc('alice').set({
+//       email: `changed.email@alice.com`,
+//     });
+//     return { text: 'Hello test from Firebase!' };
+// });
+
+
+
+
+// exports.getFirebaseDatabaseData = await firebase.database.ref('settings/setting').on('value', function(snapshot) {
+//     // context.commit('toggle', snapshot.val());
+//     return snapshot.val();
+// })
+
+
+
+
+// export async function getFBData() {
+//   console.log('index', 'getFBDATA wrapper')
+//   const test = await firebaseFunctions.httpsCallable('getFBData')({});
+//   console.log(test)
+//   return test
+//   // return await firebaseFunctions.httpsCallable('getFBData')({});
+// }
+
+// export async function test() {
+//   const res = await firebaseFunctions.httpsCallable('test')({});
+//   console.log(res);
+// }
+
+
+// export async function getFirebaseDatabaseData() {
+//   return await firebaseFunctions.httpsCallable('getFirebaseDatabaseData')({});
+// }
+
