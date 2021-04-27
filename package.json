@@ -2,21 +2,25 @@
   "name": "vue-calico",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5001",
+  "description": "## Project setup ``` yarn install ```",
+  "author": "",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "npx eslint src"
   },
+  "main": "babel.config.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "firebase": "^8.4.2",
     "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
     "vuetify": "^2.4.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
@@ -42,16 +46,14 @@
     "last 2 versions",
     "not dead"
   ],
-  "description": "## Project setup ``` yarn install ```",
-  "main": "babel.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joshin-run/vue-calico.git"
-  },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/joshin-run/vue-calico/issues"
   },
-  "homepage": "https://github.com/joshin-run/vue-calico#readme"
+  "homepage": "https://github.com/joshin-run/vue-calico#readme",
+  "license": "ISC",
+  "proxy": "http://localhost:5001",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshin-run/vue-calico.git"
+  }
 }
