@@ -26,6 +26,13 @@
       // },
 
 
+// async updateStoreWithFBData({context}) {
+    //   const res = getFBDataAction();
+    //   await context.commit('toggle', res);
+    // }
+
+
+
 
       <v-btn @click="clear">clear</v-btn>
 
@@ -130,3 +137,69 @@
 //   }),
 // };
 // </script>
+
+
+
+
+
+
+
+import Vuex from 'vuex'
+import Vue from 'vue'
+import firebase from "firebase/app";
+import 'firebase/functions';
+import { getFBData } from '../sdk.js';
+
+Vue.use(Vuex);
+Vue.use(firebase);
+
+export default new Vuex.Store({
+  state: {
+    user: '',
+    loggedInLink: 'Login',
+    loggedIn: false,
+    _isTrue: null,
+    loadedFBData: null
+  },
+  
+  getters: {
+    // if user is logged in...change loggedIn to true...
+    // if user is logged in...change loggedInLink to 'Logout'
+    isTrue (state) {
+      return state._isTrue;
+    }
+  },
+  
+  mutations: {
+    // Here we will create Jenny
+    updateUser(state, val) {
+        state.user = val;
+    },
+    updateLoggedInLink(state, val) {
+        state.loggedInLink = val;
+    },
+    toggle(state, bool) {
+      state._isTrue = bool;
+    },
+    gotFBData(state, val) {
+      state.loadedFBData = val
+    }
+  },
+  
+  actions: {
+    async updateFBData({commit}) {
+      commit('gotFBData', await getFBData())
+      commit('toggle', await getFBData())
+    }
+  }
+});
+
+// actions: {
+//   async getData ({ commit }) {
+//     commit('gotData', await getData())
+//   },
+//   async actionB ({ dispatch, commit }) {
+//     await dispatch('getData') // wait for `actionA` to finish
+//     commit('gotOtherData', await getOtherData())
+//   }
+// }

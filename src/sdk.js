@@ -17,8 +17,32 @@ firebaseFunctions.useEmulator('localhost', 5001);
 
 // functions that call Firebase Functions
 
-export async function test() {
-  const res = await firebaseFunctions.httpsCallable('test')({});
-  console.log(res);
+export async function getFBData() {
+  return await firebaseFunctions.httpsCallable('getFBData')({});
 }
+
+export async function setFBData(val) {
+  return await firebaseFunctions.httpsCallable('getFBData', val)({});
+}
+
+
+
+
+// export async function getFBData() {
+//   console.log('index', 'getFBDATA wrapper')
+//   const test = await firebaseFunctions.httpsCallable('getFBData')({});
+//   console.log(test)
+//   return test
+//   // return await firebaseFunctions.httpsCallable('getFBData')({});
+// }
+
+// export async function test() {
+//   const res = await firebaseFunctions.httpsCallable('test')({});
+//   console.log(res);
+// }
+
+
+// export async function getFirebaseDatabaseData() {
+//   return await firebaseFunctions.httpsCallable('getFirebaseDatabaseData')({});
+// }
 

@@ -5,6 +5,8 @@
         dark
     >
         <Logo />
+        <button @click="toggleMe">Toggle Me</button>
+        <h1 v-if="isTrue">true man!</h1>
         <v-spacer></v-spacer>
         <Nav />
     </v-app-bar>
@@ -19,6 +21,16 @@ export default {
     components: {
         Nav,
         Logo
+    },
+    computed: {
+        isTrue () {
+            return this.$store.getters.isTrue
+        }
+    },
+    methods: {
+        async toggleMe() {
+            await this.$store.dispatch('toggle')
+        }
     }
 }
 </script>

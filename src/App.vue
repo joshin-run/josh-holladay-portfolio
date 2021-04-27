@@ -9,16 +9,14 @@
 
 <script>
 import Header from './components/Header.vue'
-// import SDK from './sdk.js';
-// import { test } from './sdk.js';
 
 export default {
   name: 'App',
   components: {
     Header
   },
-  // async mounted () {
-  //   await this.SDK.test();
-  // }
+  async created() {
+    await this.$store.dispatch('toggle')
+  }
 };
 </script>
