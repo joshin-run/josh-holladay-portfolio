@@ -5,8 +5,8 @@
         dark
     >
         <Logo />
-        <button @click="toggleMe">Toggle Me</button>
-        <h1 v-if="isTrue">true man!</h1>
+        <!-- <button @click="toggleMe">Toggle Me</button> -->
+        <!-- <h1 v-if="isTrue">true man!</h1> -->
         <v-spacer></v-spacer>
         <Nav />
     </v-app-bar>

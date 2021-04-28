@@ -15,8 +15,8 @@ export default {
   components: {
     Header
   },
-  async created() {
-    await this.$store.dispatch('toggle')
-  }
+  // async created() {
+  //   await this.$store.dispatch('getUsers')
+  // }
 };
 </script>

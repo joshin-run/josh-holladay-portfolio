@@ -4,7 +4,7 @@
     <form>
       <v-select
         v-model="select"
-        :items="user"
+        :items="users"
         :error-messages="selectErrors"
         label="Username"
         required
@@ -49,11 +49,11 @@
     data: () => ({
       name: '',
       select: null,
-      user: [
-        'User 1',
-        'User 2',
-        'User 3'
-      ],
+      // user: [
+      //   'User 1',
+      //   'User 2',
+      //   'User 3'
+      // ],
       checkbox: false,
       show1: false,
       show2: true,
@@ -75,6 +75,9 @@
       }
     },
     computed: {
+      users () {
+        return this.$store.getters.users
+      },
       checkboxErrors () {
         const errors = []
         if (!this.$v.checkbox.$dirty) return errors
