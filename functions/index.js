@@ -6,6 +6,12 @@ admin.initializeApp();
 
 const db = admin.firestore();
 
+exports.getUsers = functions.https.onCall(async (data, context) => {
+    console.log('q', await getDocs(collection(db, 'users'))
+    // const querySnapshot = await getDocs(collection(db, 'users'));
+    // console.log('q', querySnapshot)
+}
+
 // exports.getUsers = functions.https.onCall(async (data, context) => {
 //     return new Promise((resolve, reject) => {
 //         console.log('getUsers')
@@ -15,53 +21,15 @@ const db = admin.firestore();
 //     })
 // });
 
-exports.getUsers = functions.https.onCall(async(async (data, context) => {
-    const querySnapshot = await getDocs(collection(db, 'users'));
-    console.log('q', querySnapshot)
-    return querySnapshot
-    // querySnapshot.forEach((doc) => {
-    //   console.log(`${doc.id} => ${doc.data()}`);
-    // });
-    // const querySnapshot = await getDocs(collection(db, 'users'));
-    // querySnapshot.forEach((doc) => {
-    //   console.log(`${doc.id} => ${doc.data()}`);
-    // });
-}))
 
-// exports.getUser = () => {
-//     const querySnapshot = await getDocs(collection(db, 'users'));
-//     querySnapshot.forEach((doc) => {
-//       console.log(`${doc.id} => ${doc.data()}`);
-//     });
-// }
-
-
-// const { firestore } = require("firebase-admin");
-// const functions = require("firebase-functions");
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-
-
-
-
-// exports.getUsers = functions.https.onCall((data, context) => {
-//     return firebase.database.
-// })
-
-// exports.getFBData = functions.https.onCall((data, context) => {
-//     return new Promise((resolve, reject) => {
-//       firebase.database.ref('settings/setting').on('value', (snapshot) => {
-//         resolve(snapshot.val())
-//     })
-//   })
+// const querySnapshot = await getDocs(collection(db, 'users'));
+// console.log('q', querySnapshot)
+// return querySnapshot
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
 // });
-
-// exports.getFBData = functions.https.onCall((val) => {
-//     return new Promise((resolve, reject) => {
-//         firebase.database.ref('settings/setting').set(val)
-//     })
+// const querySnapshot = await getDocs(collection(db, 'users'));
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
 // });
-
-
 

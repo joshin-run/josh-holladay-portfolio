@@ -1,5 +1,147 @@
 <!--
 
+
+  // async created() {
+  //   await this.$store.dispatch('getUsers')
+  // }
+
+
+
+
+// exports.getUser = () => {
+//     const querySnapshot = await getDocs(collection(db, 'users'));
+//     querySnapshot.forEach((doc) => {
+//       console.log(`${doc.id} => ${doc.data()}`);
+//     });
+// }
+
+
+// const { firestore } = require("firebase-admin");
+// const functions = require("firebase-functions");
+
+// // Create and Deploy Your First Cloud Functions
+// // https://firebase.google.com/docs/functions/write-firebase-functions
+
+
+
+
+// exports.getUsers = functions.https.onCall((data, context) => {
+//     return firebase.database.
+// })
+
+// exports.getFBData = functions.https.onCall((data, context) => {
+//     return new Promise((resolve, reject) => {
+//       firebase.database.ref('settings/setting').on('value', (snapshot) => {
+//         resolve(snapshot.val())
+//     })
+//   })
+// });
+
+// exports.getFBData = functions.https.onCall((val) => {
+//     return new Promise((resolve, reject) => {
+//         firebase.database.ref('settings/setting').set(val)
+//     })
+// });
+
+
+
+loggedInLink: 'Login',
+loggedIn: false,
+_isTrue: null
+// if user is logged in...change loggedIn to true...
+// if user is logged in...change loggedInLink to 'Logout'
+isTrue (state) {
+  return state._isTrue;
+},
+
+
+
+
+async toggle(context) {
+      let temp = !context.state._isTrue
+      await setFBData(temp)
+    },
+    async updateFBData(context) {
+      const result = await getFBData();
+      context.commit('toggle', result);
+      // context.commit('toggle', await getFBData());
+    }
+
+
+
+
+
+// import { initializeApp } from "firebase/app";
+// import { getFirestore } from "firebase/firestore";
+
+// const firebaseApp = initializeApp({
+//   apiKey: "AIzaSyBpIu4FOqKQgl4IVsdR6Yced7xAjU1RrUU",
+//   authDomain: "calico-7c4ba.firebaseapp.com",
+//   projectId: "calico-7c4ba",
+// });
+
+// const db = getFirestore();
+
+// const firebaseFunctions = firebaseApp.functions();
+// firebaseFunctions.useEmulator('localhost', 5001);
+
+
+
+// import firebase from "firebase/app";
+// import 'firebase/functions';
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBpIu4FOqKQgl4IVsdR6Yced7xAjU1RrUU",
+//   authDomain: "calico-7c4ba.firebaseapp.com",
+//   projectId: "calico-7c4ba",
+//   storageBucket: "calico-7c4ba.appspot.com",
+//   messagingSenderId: "714349983765",
+//   appId: "1:714349983765:web:6269ddd18883a20b59761c"
+// };
+
+// const app = firebase.initializeApp(firebaseConfig);
+
+// const firebaseFunctions = app.functions();
+// firebaseFunctions.useEmulator('localhost', 5001);
+
+// export async function setTest() {
+//   const res = await firebaseFunctions.httpsCallable('setTest')({});
+//   console.log(res);
+// }
+
+
+
+
+// import firebase from "firebase/app";
+// import 'firebase/functions';
+
+// const firebaseConfig = {
+//     apiKey: "AIzaSyBpIu4FOqKQgl4IVsdR6Yced7xAjU1RrUU",
+//     authDomain: "calico-7c4ba.firebaseapp.com",
+//     projectId: "calico-7c4ba",
+//     storageBucket: "calico-7c4ba.appspot.com",
+//     messagingSenderId: "714349983765",
+//     appId: "1:714349983765:web:6269ddd18883a20b59761c"
+// };
+
+// const app = firebase.initializeApp(firebaseConfig);
+
+
+
+// var db = firebase.firestore();
+
+
+// functions that call Firebase Functions
+
+// export async function getFBData() {
+//   return await firebaseFunctions.httpsCallable('getFBData')({});
+// }
+
+// export async function setFBData(val) {
+//   return await firebaseFunctions.httpsCallable('getFBData', val)({});
+// }
+
+
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {

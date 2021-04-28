@@ -9,14 +9,20 @@
 
 <script>
 import Header from './components/Header.vue'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'App',
   components: {
     Header
   },
-  // async created() {
-  //   await this.$store.dispatch('getUsers')
-  // }
+  methods: {
+    ...mapActions(['getUsers'])
+  },
+  async created() {
+    await this.getUsers()
+  }
 };
 </script>
+
+
