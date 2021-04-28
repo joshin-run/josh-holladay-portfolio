@@ -9,7 +9,9 @@ Vue.use(firebase);
 
 export default new Vuex.Store({
   state: {
-    users: ['sam', 'frodo']
+    users: ['sam', 'frodo'],
+    loggedInLink: 'Login',
+    loggedIn: false,
   },
   
   getters: {
