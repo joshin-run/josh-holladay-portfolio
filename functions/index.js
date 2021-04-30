@@ -1,35 +1,37 @@
-import * as functions from 'firebase-functions';
-import * as admin from 'firebase-admin';
-import { collection, getDocs } from "firebase/firestore"; 
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+const {collection, getDocs} = require("firebase/firestore");
 
 admin.initializeApp();
 
 const db = admin.firestore();
 
-exports.getUsers = functions.https.onCall(async (data, context) => {
-    console.log('q', await getDocs(collection(db, 'users'))
-    // const querySnapshot = await getDocs(collection(db, 'users'));
-    // console.log('q', querySnapshot)
-}
-
-// exports.getUsers = functions.https.onCall(async (data, context) => {
+// exports.getFBData = functions.https.onCall((data, context) => {
 //     return new Promise((resolve, reject) => {
-//         console.log('getUsers')
-//         const users = await db.collection('users')
-//         console.log(users)
-//         resolve(users)
+//       firebase.database.ref("settings/setting").on("value", (snapshot) => {
+//         resolve(snapshot.val())
 //     })
+//   })
 // });
 
+// exports.getUsers = functions.https.onCall((data, context) => {
+//   return new Promise((resolve, reject) => {
+//     resolve(getDocs(collection(db, "users")));
+//   });
+// });
 
-// const querySnapshot = await getDocs(collection(db, 'users'));
-// console.log('q', querySnapshot)
-// return querySnapshot
-// querySnapshot.forEach((doc) => {
-//   console.log(`${doc.id} => ${doc.data()}`);
-// });
-// const querySnapshot = await getDocs(collection(db, 'users'));
-// querySnapshot.forEach((doc) => {
-//   console.log(`${doc.id} => ${doc.data()}`);
-// });
+exports.getUsers = functions.https.onCall((data, context) => {
+  try {
+    return db.collection("users").get().then((querySnapshot) => {
+        return querySnapshop
+    //   querySnapshot.forEach((doc) => {
+    //     console.log(`${doc.id} => ${doc.data()}`);
+    //     // return doc.data()
+    //   });
+    };
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 

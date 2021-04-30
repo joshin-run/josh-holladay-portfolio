@@ -2,6 +2,7 @@
   <div>
     <h1>Login</h1>
     <form>
+      <!-- I would never use a drop down in a real login scenario -->
       <v-select
         v-model="select"
         :items="users"
@@ -36,10 +37,11 @@
 <script>
   import { validationMixin } from 'vuelidate'
   import { required, maxLength, email } from 'vuelidate/lib/validators'
+  import { getUsers } from '@/sdk.js'
 
   export default {
+    // mixins: [validationMixin],
     mixins: [validationMixin],
-
     validations: {
       name: { required, maxLength: maxLength(10) },
       email: { required, email },
@@ -64,7 +66,8 @@
         required: value => !!value || 'Required.',
         min: v => v.length >= 8 || 'Min 8 characters',
         emailMatch: () => (`The email and password you entered don't match`),
-      }
+      },
+      users: []
     }),
     watch: {
       password () {
@@ -75,9 +78,6 @@
       }
     },
     computed: {
-      users () {
-        return this.$store.getters.users
-      },
       checkboxErrors () {
         const errors = []
         if (!this.$v.checkbox.$dirty) return errors
@@ -117,6 +117,18 @@
         this.$router.push('/dashboard')
       },
     },
+    async created() {
+      console.log('created')
+      // console.log('created', await getUsers())
+      // getUsers().then((list) => {
+      //   // do something with list
+      //   // console.log('list', list)
+      //   this.users = list;
+      // }).error((e) => {
+      //   console.log(e);
+      // });
+      this.users = getUsers()
+    }
   }
 </script>
 <style lang="scss" scoped>

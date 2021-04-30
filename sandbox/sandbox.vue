@@ -1,6 +1,86 @@
 <!--
 
 
+
+// exports.getUsers = {
+//     async functions.https.onCall(async (data, context) {
+//         console.log('q', await getDocs(collection(db, 'users')));
+//         // const querySnapshot = await getDocs(collection(db, 'users'));
+//         // console.log('q', querySnapshot)
+//     });
+
+// }
+//===
+// exports.getUsers = functions.https.onCall(async (data, context) {
+//     console.log('q', await getDocs(collection(db, 'users')));
+//     // const querySnapshot = await getDocs(collection(db, 'users'));
+//     // console.log('q', querySnapshot)
+// });
+//===
+// exports.getUsers = functions.https.onCall(async (data, context) => {
+//     return new Promise((resolve, reject) => {
+//         console.log('getUsers')
+//         const users = await db.collection('users')
+//         console.log(users)
+//         resolve(users)
+//     })
+// });
+
+
+// const querySnapshot = await getDocs(collection(db, 'users'));
+// console.log('q', querySnapshot)
+// return querySnapshot
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
+// const querySnapshot = await getDocs(collection(db, 'users'));
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
+
+
+
+import firebase from "firebase/app";
+import 'firebase/firestore';
+​
+// Set the configuration for my app
+var config = {
+  apiKey: "AIzaSyBpIu4FOqKQgl4IVsdR6Yced7xAjU1RrUU",
+  authDomain: "calico-7c4ba.firebaseapp.com",
+  projectId: "calico-7c4ba",
+  storageBucket: "calico-7c4ba.appspot.com",
+  messagingSenderId: "714349983765",
+  appId: "1:714349983765:web:6269ddd18883a20b59761c"
+};
+​
+const app = firebase.initializeApp(config);
+​
+// Get a reference to the database service
+const db = app.firestore();
+​
+// Get references to the collections
+const users = db.collection('users');
+​
+// Methods that access Firestore functions within index.js
+export async function getUsers() {
+  return await users
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
+      });
+      return querySnapshot;
+    });
+}
+
+
+
+
+
+
+
+====================
+
   // async created() {
   //   await this.$store.dispatch('getUsers')
   // }
@@ -24,7 +104,6 @@
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
-
 
 
 
