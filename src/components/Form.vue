@@ -24,9 +24,13 @@
       ></v-text-field>
       <v-btn 
         class="mr-4 submit-btn" 
-        :disabled="submitDisabled"
         @click="submit"
       >
+      <!-- <v-btn 
+        class="mr-4 submit-btn" 
+        :disabled="submitDisabled"
+        @click="submit"
+      > -->
         submit
       </v-btn>
     </form>
@@ -37,7 +41,7 @@
 <script>
   import { validationMixin } from 'vuelidate'
   import { required, maxLength, email } from 'vuelidate/lib/validators'
-  import { getUsers } from '@/sdk.js'
+  // import { getUsers } from '@/sdk.js'
 
   export default {
     // mixins: [validationMixin],
@@ -47,36 +51,36 @@
       email: { required, email },
       select: { required },
     },
-
-    data: () => ({
-      name: '',
-      select: null,
-      // user: [
-      //   'User 1',
-      //   'User 2',
-      //   'User 3'
-      // ],
-      checkbox: false,
-      show1: false,
-      show2: true,
-      show3: false,
-      show4: false,
-      password: '',
-      rules: {
-        required: value => !!value || 'Required.',
-        min: v => v.length >= 8 || 'Min 8 characters',
-        emailMatch: () => (`The email and password you entered don't match`),
-      },
-      users: []
-    }),
-    watch: {
-      password () {
-        this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
-      },
-      select () {
-        this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
+    data () {
+      return {
+        name: '',
+        select: null,
+        users: [
+          'User 1',
+          'User 2',
+          'User 3'
+        ],
+        checkbox: false,
+        show1: false,
+        show2: true,
+        show3: false,
+        show4: false,
+        password: '',
+        rules: {
+          required: value => !!value || 'Required.',
+          min: v => v.length >= 8 || 'Min 8 characters',
+          emailMatch: () => (`The email and password you entered don't match`),
+        }
       }
     },
+    // watch: {
+    //   password () {
+    //     this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
+    //   },
+    //   select () {
+    //     this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
+    //   }
+    // },
     computed: {
       checkboxErrors () {
         const errors = []
@@ -104,9 +108,9 @@
         !this.$v.email.required && errors.push('E-mail is required')
         return errors
       },
-      submitDisabled () {
-        return this.select != '' && this.password.length > 7 ? false : true
-      }
+      // submitDisabled () {
+      //   return this.select != '' && this.password.length > 7 ? false : true
+      // }
     },
 
     methods: {
@@ -117,8 +121,8 @@
         this.$router.push('/dashboard')
       },
     },
-    async created() {
-      console.log('created')
+    // async created() {
+    //   console.log('created')
       // console.log('created', await getUsers())
       // getUsers().then((list) => {
       //   // do something with list
@@ -127,8 +131,8 @@
       // }).error((e) => {
       //   console.log(e);
       // });
-      this.users = getUsers()
-    }
+    //   this.users = getUsers()
+    // }
   }
 </script>
 <style lang="scss" scoped>

@@ -22,11 +22,69 @@ firebaseFunctions.useEmulator('localhost', 5001);
 // Methods that access Firestore functions within index.js
 
 export function getUsers() {
+  console.log('here')
+  const myPromise = new Promise((resolve, reject) => {
+    firebaseFunctions.httpsCallable('getUsers')({});
+    resolve('Success');
+    reject('Something went wrong!')
+  })
+
+  return myPromise.then(
+    (result) => { 
+       console.log(result);
+       return result
+    },
+    (error) => { 
+       console.log(error);
+    }
+  ); 
+}
+
+// export function getUsers() {
+//   console.log('here')
+//   try {
+//     const myPromise = new Promise((resolve, reject) => {
+//       console.log('here')
+//       firebaseFunctions.httpsCallable('getUsers')({});
+//       resolve('Success')
+//     })
+//     myPromise.then((res) => {
+//       return res;
+//     })
+//   } catch (error) {
+//     console.error('error', error);
+//   }  
+// }
+
+
+
+// export async function helloWorld(): Promise<void> {
+//   const res = await firebaseFunctions.httpsCallable('helloWorld')({});
+//   console.log(res);
+// }
+
+// export function getUsers() {
+//   console.log('here')
+//   try {
+//     const myPromise = new Promise((resolve, reject) => {
+
+//     })
+//     console.log('here')
+//     const res = firebaseFunctions.httpsCallable('getUsers')({});
+//     console.log('res', res)
+//     return res
+//   } catch (error) {
+//     console.error('error', error);
+//   }  
+// }
+
+
+// export function getUsers() {
   // return new Promise((resolve, reject) => {
     //       firebase.database.ref("settings/setting").on("value", (snapshot) => {
     //         resolve(snapshot.val())
     //     })
-}
+// }
 //=========
 // .then((list) => {
 //     try {

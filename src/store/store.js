@@ -9,9 +9,9 @@ Vue.use(firebase);
 
 export default new Vuex.Store({
   state: {
-    users: ['sam', 'frodo'],
-    loggedInLink: 'Login',
     loggedIn: false,
+    users: [],
+    currentUser: null
   },
   
   getters: {
@@ -30,7 +30,6 @@ export default new Vuex.Store({
     async getUsers() {
       const res = await getUsers()
       console.log('res', res)
-      // context.commit('setUsers', await getUsers())
     }
   }
 });
