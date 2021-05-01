@@ -78,6 +78,10 @@ export default {
   //   }
   // },
   computed: {
+    // getUsers () {
+    //   const users = getUsers()
+    //   return users
+    // },
     checkboxErrors () {
       const errors = []
       if (!this.$v.checkbox.$dirty) return errors
