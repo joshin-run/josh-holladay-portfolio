@@ -4,38 +4,63 @@ const admin = require("firebase-admin");
 
 admin.initializeApp();
 
-const firestoreDB = admin.firestore();
+const db = admin.firestore();
 
 // console.log(collection)
 // console.log(getDocs)
 // console.log(firestoreDB)
 // console.log(functions)
 
-exports.getUsers = functions.https.onCall((data, context) => {
-  console.log("here is");
-  const myPromise = new Promise((resolve, reject) => {
-    firestoreDB.collection("users");
-    resolve("Success!");
-  });
-  myPromise.then(
-    (result) => { 
-      console.log(result);
-      return result;
-    },
-    (error) => { 
-      console.log(error);
-    }
-//   myPromise.then((res) => {
-//     console.log(res);
-//     return res;
+// exports.getUsers = functions.https.onCall((data, context) => {
+//   return db.collection("users").get();
+// });
+
+// exports.getUsers = () => {
+//   functions.https.onCall((data, context) => {
+//     return db.collection("users").get();
 //   });
+// }
+
+exports.getUsers = () => {
+  functions.https.onCall((data, context) => {
+    return db.collection("users").get();
   });
-});
+};
+
+// ======
+
+// exports.getUsers = functions.https.onCall((data, context) => {
+//   console.log("here is");
+//   // return db.collection("users").get();
+//   return db.collection("users").get().then();
+// });
+
+// ======
+
+// db.collection("cities").get().then((querySnapshot) => {
+//   querySnapshot.forEach((doc) => {
+//       // doc.data() is never undefined for query doc snapshots
+//       console.log(doc.id, " => ", doc.data());
+//   });
+// });
+
+// exports.addMessage = functions.https.onCall((data, context) => {
+//   // ...
+// });
 
 
+// Saving the new message to the Realtime Database.
+// const sanitizedMessage = sanitizer.sanitizeText(text);
+// return admin.database().ref('/messages').push({
+//   text: sanitizedMessage,
+//   author: { uid, name, picture, email },
+// }).then(() => {
+//   console.log('New Message written');
+//   // Returning the sanitized message to the client.
+//   return { text: sanitizedMessage };
+// })
 
-    // console.log(collection)
-    // const res = firestoreDB.collection("users");
+
 //     .get().then((querySnapshot) => {
 //         console.log(querySnapshot);
 //         resolve(querySnapshot);
@@ -90,14 +115,12 @@ exports.getUsers = functions.https.onCall((data, context) => {
 //   })
 // });
 
-
-
-    // firestoreDB.collection("users").get().then((querySnapshot) => {
-    //     querySnapshot.forEach((doc) => {
-    //         console.log(`${doc.id} => ${doc.data()}`);
-    //     });
-    // });
-    // return { text: 'Hello from Firebase!' };
+// firestoreDB.collection("users").get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//         console.log(`${doc.id} => ${doc.data()}`);
+//     });
+// });
+// return { text: 'Hello from Firebase!' };
 
 
 // exports.getData = functions.https.onCall(async (data, context) => {

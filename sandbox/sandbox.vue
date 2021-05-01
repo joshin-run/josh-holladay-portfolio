@@ -42,7 +42,6 @@
 
 import firebase from "firebase/app";
 import 'firebase/firestore';
-​
 // Set the configuration for my app
 var config = {
   apiKey: "AIzaSyBpIu4FOqKQgl4IVsdR6Yced7xAjU1RrUU",
@@ -52,15 +51,15 @@ var config = {
   messagingSenderId: "714349983765",
   appId: "1:714349983765:web:6269ddd18883a20b59761c"
 };
-​
+
 const app = firebase.initializeApp(config);
-​
+
 // Get a reference to the database service
 const db = app.firestore();
-​
+
 // Get references to the collections
 const users = db.collection('users');
-​
+
 // Methods that access Firestore functions within index.js
 export async function getUsers() {
   return await users

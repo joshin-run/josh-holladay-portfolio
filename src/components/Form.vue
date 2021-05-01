@@ -39,102 +39,93 @@
 
 
 <script>
-  import { validationMixin } from 'vuelidate'
-  import { required, maxLength, email } from 'vuelidate/lib/validators'
-  // import { getUsers } from '@/sdk.js'
+import { validationMixin } from 'vuelidate'
+import { required, maxLength, email } from 'vuelidate/lib/validators'
+import { getUsers } from '@/sdk.js'
 
-  export default {
-    // mixins: [validationMixin],
-    mixins: [validationMixin],
-    validations: {
-      name: { required, maxLength: maxLength(10) },
-      email: { required, email },
-      select: { required },
-    },
-    data () {
-      return {
-        name: '',
-        select: null,
-        users: [
-          'User 1',
-          'User 2',
-          'User 3'
-        ],
-        checkbox: false,
-        show1: false,
-        show2: true,
-        show3: false,
-        show4: false,
-        password: '',
-        rules: {
-          required: value => !!value || 'Required.',
-          min: v => v.length >= 8 || 'Min 8 characters',
-          emailMatch: () => (`The email and password you entered don't match`),
-        }
+export default {
+  // mixins: [validationMixin],
+  mixins: [validationMixin],
+  validations: {
+    name: { required, maxLength: maxLength(10) },
+    email: { required, email },
+    select: { required },
+  },
+  data () {
+    return {
+      name: '',
+      select: null,
+      users: [],
+      checkbox: false,
+      show1: false,
+      show2: true,
+      show3: false,
+      show4: false,
+      password: '',
+      rules: {
+        required: value => !!value || 'Required.',
+        min: v => v.length >= 8 || 'Min 8 characters',
+        emailMatch: () => (`The email and password you entered don't match`),
       }
+    }
+  },
+  // watch: {
+  //   password () {
+  //     this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
+  //   },
+  //   select () {
+  //     this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
+  //   }
+  // },
+  computed: {
+    checkboxErrors () {
+      const errors = []
+      if (!this.$v.checkbox.$dirty) return errors
+      !this.$v.checkbox.checked && errors.push('You must agree to continue!')
+      return errors
     },
-    // watch: {
-    //   password () {
-    //     this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
-    //   },
-    //   select () {
-    //     this.submitDisabled = this.select != '' && this.password == 'password' ? false : true
-    //   }
-    // },
-    computed: {
-      checkboxErrors () {
-        const errors = []
-        if (!this.$v.checkbox.$dirty) return errors
-        !this.$v.checkbox.checked && errors.push('You must agree to continue!')
-        return errors
-      },
-      selectErrors () {
-        const errors = []
-        if (!this.$v.select.$dirty) return errors
-        !this.$v.select.required && errors.push('Item is required')
-        return errors
-      },
-      nameErrors () {
-        const errors = []
-        if (!this.$v.name.$dirty) return errors
-        !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
-        !this.$v.name.required && errors.push('Name is required.')
-        return errors
-      },
-      emailErrors () {
-        const errors = []
-        if (!this.$v.email.$dirty) return errors
-        !this.$v.email.email && errors.push('Must be valid e-mail')
-        !this.$v.email.required && errors.push('E-mail is required')
-        return errors
-      },
-      // submitDisabled () {
-      //   return this.select != '' && this.password.length > 7 ? false : true
-      // }
+    selectErrors () {
+      const errors = []
+      if (!this.$v.select.$dirty) return errors
+      !this.$v.select.required && errors.push('Item is required')
+      return errors
     },
-
-    methods: {
-      submit () {
-        this.$v.$touch()
-        this.$store.commit('updateUser', this.select)
-        this.$store.commit('loggedInLink', 'Logout')
-        this.$router.push('/dashboard')
-      },
+    nameErrors () {
+      const errors = []
+      if (!this.$v.name.$dirty) return errors
+      !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
+      !this.$v.name.required && errors.push('Name is required.')
+      return errors
     },
-    // async created() {
-    //   console.log('created')
-      // console.log('created', await getUsers())
-      // getUsers().then((list) => {
-      //   // do something with list
-      //   // console.log('list', list)
-      //   this.users = list;
-      // }).error((e) => {
-      //   console.log(e);
-      // });
-    //   this.users = getUsers()
+    emailErrors () {
+      const errors = []
+      if (!this.$v.email.$dirty) return errors
+      !this.$v.email.email && errors.push('Must be valid e-mail')
+      !this.$v.email.required && errors.push('E-mail is required')
+      return errors
+    },
+    // submitDisabled () {
+    //   return this.select != '' && this.password.length > 7 ? false : true
     // }
-  }
+  },
+
+  methods: {
+    submit () {
+      this.$v.$touch()
+      this.$store.commit('updateUser', this.select)
+      this.$store.commit('loggedInLink', 'Logout')
+      this.$router.push('/dashboard')
+    },
+  },
+  async created () {
+    console.log('created')
+    const users = await getUsers()
+    this.users = users
+  },
+}
 </script>
+
+
 <style lang="scss" scoped>
 .submit-btn {
   margin-top: 20px;

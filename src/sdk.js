@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/functions';
 
 // Set the configuration for my app
-var config = {
+const config = {
   apiKey: "AIzaSyBpIu4FOqKQgl4IVsdR6Yced7xAjU1RrUU",
   authDomain: "calico-7c4ba.firebaseapp.com",
   projectId: "calico-7c4ba",
@@ -22,23 +22,32 @@ firebaseFunctions.useEmulator('localhost', 5001);
 // Methods that access Firestore functions within index.js
 
 export function getUsers() {
-  console.log('here')
-  const myPromise = new Promise((resolve, reject) => {
-    firebaseFunctions.httpsCallable('getUsers')({});
-    resolve('Success');
-    reject('Something went wrong!')
-  })
-
-  return myPromise.then(
-    (result) => { 
-       console.log(result);
-       return result
-    },
-    (error) => { 
-       console.log(error);
-    }
-  ); 
+  console.log('sdk')
+  const result = firebaseFunctions.httpsCallable('getUsers')({});
+  console.log('result', result)
+  return result;
 }
+
+
+
+// export function getUsers() {
+//   console.log('here')
+//   const myPromise = new Promise((resolve, reject) => {
+//     firebaseFunctions.httpsCallable('getUsers')({});
+//     resolve('Success');
+//     reject('Something went wrong!')
+//   })
+
+//   return myPromise.then(
+//     (result) => { 
+//        console.log(result);
+//        return result
+//     },
+//     (error) => { 
+//        console.log(error);
+//     }
+//   ); 
+// }
 
 // export function getUsers() {
 //   console.log('here')
