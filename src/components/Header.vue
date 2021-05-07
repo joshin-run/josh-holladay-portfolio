@@ -1,24 +1,18 @@
 <template>
-    <v-app-bar
-        app
-        color="blue lighten-3"
-        dark
-    >
-        <Logo />
-        <v-spacer></v-spacer>
+    <div class="header">
+        <img class="logo" src="@/assets/icons/icon-j.png" />
         <Nav />
-    </v-app-bar>
+    </div>
 </template>
 
 <script>
 import Nav from './Nav.vue'
-import Logo from './Logo.vue'
+// import Logo from './Logo.vue'
 
 export default {
     name: 'Header',
     components: {
         Nav,
-        Logo
     },
     computed: {
         isTrue () {
@@ -33,7 +27,18 @@ export default {
 }
 </script>
 <style scoped>
-header {
+.header {
     box-shadow: none !important;
+    background-color: #83C4FF;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+}
+.logo {
+    height: 60px;
 }
 </style>

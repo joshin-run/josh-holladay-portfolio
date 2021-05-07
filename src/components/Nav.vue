@@ -1,18 +1,24 @@
 <template>
     <div>
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/login" class="nav-link">{{loggedInLink}}</router-link>
-        <router-link to="/dashboard" class="nav-link">Dashboard</router-link>
+        <div v-for="(link,index) in links" :key="index">
+            <a :href="`#${link.toLowerCase()}`" :atr="link">{{link}}</a>
+        </div>
     </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
     name: 'Nav',
-    computed: {
-        ...mapState(['loggedInLink'])
+    data () {
+        return {
+            links: [
+                'Home',
+                'Design',
+                'Development',
+                'About',
+                'Contact'
+            ]
+        }
     }
 }
 </script>

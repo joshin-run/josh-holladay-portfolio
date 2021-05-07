@@ -1,13 +1,6 @@
 <template>
-    <div class="d-flex align-center">
-        <v-img
-            alt="Vuetify Logo"
-            class="shrink mr-2"
-            contain
-            src="@/assets/Calico-logo-icon.png"
-            transition="scale-transition"
-            width="120"
-        />
+    <div class="logo-wrapper">
+        <img class="logo" src="@/assets/icons/icon-j.png" />
     </div>
 </template>
 
@@ -18,5 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.logo {
+    height: 40px;
+}
 </style>

@@ -9,6 +9,7 @@
 
 <script>
 import Header from './components/Header.vue'
+
 // import { mapActions } from 'vuex'
 
 export default {
@@ -25,4 +26,7 @@ export default {
 };
 </script>
 
+<style lang="scss">
+// @import './styles/main.scss';
+</style>
 

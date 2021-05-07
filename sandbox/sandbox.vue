@@ -1,5 +1,48 @@
 <!--
 
+// pluginOptions: {
+  //   "style-resources-loader": {
+  //     preProcessor: "scss",
+  //     patterns: [path.resolve(__dirname, "@/styles/main.scss")]
+  //   }
+  // }
+
+// module.exports = {
+//   transpileDependencies: [
+//     'vuetify'
+//   ],
+//   css: {
+//     loaderOptions: {
+//       sass: {
+//         data: `
+//           @import "@/styles/main.scss";
+//         `
+//       }
+//     }
+//   },
+//   configureWebpack: {
+//     module: {
+//       rules: [
+//         {
+//           test: /\.s(c|a)ss$/,
+//           use: [
+//             'vue-style-loader',
+//             'css-loader',
+//             {
+//               loader: 'sass-loader',
+//               // Requires sass-loader@^7.0.0
+//               options: {
+//                 implementation: require('sass'),
+//                 fiber: require('fibers'),
+//                 indentedSyntax: true // optional
+//               },
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//   }
+// }
 
 
 // exports.getUsers = {
@@ -85,7 +128,7 @@ export async function getUsers() {
   // }
 
           <!-- <button @click="toggleMe">Toggle Me</button> -->
-        <!-- <h1 v-if="isTrue">true man!</h1> 
+        <!-- <h1 v-if="isTrue">true man!</h1>
 
 
 
@@ -252,8 +295,8 @@ service cloud.firestore {
           min-width="100"
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
           width="100"
-        /> 
-        
+        />
+
       // clear () {
       //   this.$v.$reset()
       //   this.name = ''
@@ -311,7 +354,7 @@ service cloud.firestore {
         required
         @input="$v.name.$touch()"
         @blur="$v.name.$touch()"
-      ></v-text-field> --> 
+      ></v-text-field> -->
 
 
 <!-- <v-btn
@@ -398,7 +441,7 @@ export default new Vuex.Store({
     _isTrue: null,
     loadedFBData: null
   },
-  
+
   getters: {
     // if user is logged in...change loggedIn to true...
     // if user is logged in...change loggedInLink to 'Logout'
@@ -406,7 +449,7 @@ export default new Vuex.Store({
       return state._isTrue;
     }
   },
-  
+
   mutations: {
     // Here we will create Jenny
     updateUser(state, val) {
@@ -422,7 +465,7 @@ export default new Vuex.Store({
       state.loadedFBData = val
     }
   },
-  
+
   actions: {
     async updateFBData({commit}) {
       commit('gotFBData', await getFBData())
