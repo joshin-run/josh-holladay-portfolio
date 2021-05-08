@@ -1,7 +1,14 @@
 <template>
   <div id="title">
-    <p
-        class="title">{{title}}</p>
+    <div
+        class="title"
+    >
+        <!-- :style="
+            `color: ${color}`,
+            `border: 3px solid ${color}`
+        " -->
+        {{title.toUpperCase()}}
+    </div>
   </div>
 </template>
 
@@ -16,6 +23,15 @@
 </script>
 
 <style lang="scss" scoped>
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 6px solid black;
+    padding: 20px;
+    width: auto;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
 // @media only screen and (min-width: 786px) {
 //   .logo-kit {
 //     height: 500px;
