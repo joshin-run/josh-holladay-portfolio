@@ -1,26 +1,24 @@
 <template>
-  <div id="hero">
+  <div id="design">
     <img class="logo-kit" src="@/assets/j-shadow-name.png" />
-    <p class="quote">“Where IMAGINATION & CREATIVITY know no bounds.”</p>
   </div>
 </template>
 
 <script>
 
   export default {
-    name: 'Home',
+    name: 'Design',
   }
 </script>
 
 <style lang="scss" scoped>
 #hero {
-  background-color: #83C4FF;
-  height: 100vh;
+  background-color: #FFFFFF;
+  height: calc(100vh - 120px);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
 }
 .logo-kit {
   height: 400px;
@@ -28,11 +26,6 @@
 @media only screen and (min-width: 786px) {
   .logo-kit {
     height: 500px;
-  }
-  .quote {
-    color: #FFFFFF;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
   }
 }
 </style>

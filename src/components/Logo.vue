@@ -11,7 +11,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logo {
-    height: 40px;
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    padding-right: 45px;
+    .logo {
+        height: 60px;
+    }
 }
 </style>
