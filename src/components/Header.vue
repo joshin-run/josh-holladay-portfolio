@@ -32,7 +32,7 @@ export default {
 .header {
     box-shadow: none !important;
     background-color: #83C4FF;
-    height: 120px;
+    height: 80px;
     /* padding: 10px 20px; */
     display: flex;
     flex-direction: row;
@@ -40,8 +40,5 @@ export default {
     align-items: center;
     position: fixed;
     width: 100%;
-}
-.logo {
-    height: 60px;
 }
 </style>

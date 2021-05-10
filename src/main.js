@@ -4,6 +4,7 @@ import router from './router'
 import vuetify from './plugins/vuetify'
 import store from './store/store'
 import VueMq from 'vue-mq'
+import './styles/main.scss'
 
 Vue.config.productionTip = false
 

@@ -57,7 +57,7 @@ export default {
 }
 .icon-link {
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 20px;
     color: black;
     text-transform: uppercase;
     // font-family: Montserrat;
@@ -69,7 +69,7 @@ export default {
         color: #00F9F9;
     }
     .icon {
-        height: 50px;
+        height: 30px;
     }
 }
 </style>

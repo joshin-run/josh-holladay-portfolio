@@ -23,16 +23,20 @@
   padding-top: 100px;
 }
 .logo-kit {
-  height: 400px;
+  height: 200px;
 }
+.quote {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+// Tablet and Above
 @media only screen and (min-width: 786px) {
   .logo-kit {
-    height: 500px;
+    height: 350px;
   }
   .quote {
-    color: #FFFFFF;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
   }
 }
 </style>

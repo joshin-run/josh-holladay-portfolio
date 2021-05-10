@@ -19,7 +19,7 @@ export default {
     padding: 30px;
     padding-right: 45px;
     .logo {
-        height: 60px;
+        height: 30px;
     }
 }
 </style>

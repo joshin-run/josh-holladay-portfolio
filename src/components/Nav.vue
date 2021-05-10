@@ -79,7 +79,7 @@ export default {
     // font-family: Montserrat;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: .85rem;
     color: #FFFFFF;
     &:hover{
         color: #00F9F9;
@@ -91,6 +91,6 @@ export default {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    // width: 100%;
 }
 </style>
