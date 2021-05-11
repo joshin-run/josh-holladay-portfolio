@@ -1,12 +1,16 @@
 <template>
-  <div id="projects" class="projects-wrapper">
-    <div class="design-content">
+  <div id="projects" class="page-wrapper">
+    <div class="content-wrapper">
       <div>
         <Title
           :title="'Design'"
+          :color="'#303030'"
         />
       </div>
-      <div v-for="(desProj,index) in designProjects" :key="index">
+      <div
+        v-for="(desProj,index) in designProjects"
+        :key="index"
+      >
         <Project
           :imgSrc="desProj.imgSrc"
           :name="desProj.name"
@@ -15,13 +19,13 @@
           :stack="desProj.stack"
           :description="desProj.description"
         />
-        {{index}}
       </div>
     </div>
-    <div class="development-content">
+    <div class="content-wrapper development">
       <div>
         <Title
           :title="'Development'"
+          :color="'#303030'"
         />
       </div>
       <div v-for="(devProj,index) in developmentProjects" :key="index">
@@ -33,7 +37,6 @@
           :stack="devProj.stack"
           :description="devProj.description"
         />
-        {{index}}
       </div>
     </div>
   </div>
@@ -54,21 +57,45 @@ import Project from '../components/Project.vue'
         designProjects: [
           {
             imgSrc: 'crescendo/crescendo-hero',
+            name: 'Crescendo Digital Marketing',
+            imgPlacement: '',
+            title: 'Crescendo Digital Marketing',
+            stack: 'Vue / Sass',
+            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          },
+          {
+            imgSrc: 'crescendo/crescendo-hero',
             name: 'Josh Holladay Portfolio',
             imgPlacement: '',
             title: 'Portfolio',
             stack: 'Vue / Sass',
-            description: 'Here is my latest development work',
+            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          },
+          {
+            imgSrc: 'crescendo/crescendo-hero',
+            name: 'Josh Holladay Portfolio',
+            imgPlacement: '',
+            title: 'Portfolio',
+            stack: 'Vue / Sass',
+            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
           },
         ],
         developmentProjects: [
+          {
+            imgSrc: 'portfolio/portfolio-hero',
+            name: 'Portfolio',
+            imgPlacement: 'right',
+            title: 'Portfolio',
+            stack: 'JS / Vue',
+            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          },
           {
             imgSrc: 'portfolio/portfolio-hero',
             name: 'name',
             imgPlacement: 'right',
             title: 'title',
             stack: 'stack / stack',
-            description: 'Here is my latest development work',
+            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
           },
         ]
       }
@@ -77,34 +104,29 @@ import Project from '../components/Project.vue'
 </script>
 
 <style lang="scss" scoped>
-.projects-wrapper {
+#projects {
   display: flex;
   flex-direction: column;
-  padding: 50px 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  .design-content,
-  .development-content {
-    width: 100%;
-    padding: 0 30px;
-  }
+  // justify-content: center;
+  // padding: 50px 0;
+  // max-width: 1200px;
+  // margin: 0 auto;
+  // .design-content,
+  // .development-content {
+  //   width: 100%;
+  //   padding: 0 30px;
+  // }
 }
 @media only screen and (min-width: 1201px) {
-  .projects-wrapper {
-    padding: 80px 0;
+  #projects {
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 900px) {
-  .projects-wrapper {
+  #projects {
     flex-direction: row;
   }
-  .design-content,
-  .development-content {
-    width: 50%;
-    padding: 0 30px;
-  }
-  .development-content {
+  .development {
     border-left: 2px solid rgb(235, 242, 255);
   }
 }

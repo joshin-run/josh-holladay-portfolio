@@ -5,7 +5,6 @@
             :src="require(`../assets/projects/${imgSrc}.png`)"
             :alt="name"
         />
-        {{imgSrc}}
     </div>
 </template>
 
@@ -25,16 +24,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.proj-img {
-    width: 100%;
-    // max-width: 90vw;
-    height: auto;
+.proj-img-wrapper {
+    margin-bottom: 15px;
+    .proj-img {
+        width: 100%;
+        // max-width: 90vw;
+        height: auto;
+    }
 }
 @media only screen and (min-width: 900px) {
-  .proj-img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-  }
+    .proj-img-wrapper {
+        .proj-img {
+            height: auto;
+            max-width: 600px;
+            width: 100%;
+        }
+    }
 }
 </style>

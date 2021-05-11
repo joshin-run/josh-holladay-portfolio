@@ -1,15 +1,19 @@
 <template>
   <div id="title">
-    <h1>
+    <!-- <h1> -->
         <!-- :style="
             `color: ${color}`,
             `border: 3px solid ${color}`
+          :style="`{color: #${color}}`"
         " -->
-        <span class="title">
+        <p
+          class="title"
+          :style="{color: color}"
+        >
           {{title.toUpperCase()}}
-        </span>
+        </p>
 
-    </h1>
+    <!-- </h1> -->
   </div>
 </template>
 
@@ -26,23 +30,23 @@
 <style lang="scss" scoped>
 .title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: 3px solid black;
-    padding: 6px 13px;
+    // border: 3px solid black;
+    // padding: 6px 13px;
     width: auto;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 30px;
     width: auto;
     display: inline-block
 }
 // @media only screen and (min-width: 900px) {
-//   .logo-kit {
-//     height: 500px;
-//   }
-//   .quote {
-//     color: #FFFFFF;
-//     font-size: 2rem;
-//     font-family: Arial, Helvetica, sans-serif;
+//   .title {
+//     font-size: 3rem;
 //   }
 // }
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 4.5rem;
+  }
+}
 </style>

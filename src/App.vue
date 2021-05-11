@@ -35,7 +35,7 @@ export default {
     About,
     Contact,
     Sidebar,
-    NavMobile
+    NavMobile,
   }
 };
 </script>

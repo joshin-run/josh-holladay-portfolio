@@ -38,6 +38,7 @@ export default {
             links: [
                 'Design',
                 'Development',
+                'Skills',
                 'About',
                 'Contact'
             ]
@@ -81,7 +82,7 @@ export default {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     // font-family: Arial, Helvetica, sans-serif;
     // font-weight: 400;
-    font-size: .85rem;
+    font-size: .95rem;
     color: #FFFFFF;
     &:hover{
         color: #00F9F9;
@@ -100,5 +101,8 @@ export default {
         height: 45px;
         margin-right: 30px;
     }
+    // .nav-link {
+    //     font-size:
+    // }
 }
 </style>

@@ -6,8 +6,9 @@
                     <a
                         class="nav-link"
                         :href="`#${link.toLowerCase()}`"
-                        :atr="link">{{link}}
                         @click="closeSidebarPanel"
+                    >
+                        {{link}}
                     </a>
                 </div>
             </div>
@@ -19,7 +20,7 @@
 
 <script>
 import Media from './Media.vue'
-import { store, mutations } from '@/store.js'
+import { mutations } from '@/store.js'
 
 export default {
     name: 'Nav',
@@ -31,19 +32,20 @@ export default {
             links: [
                 'Design',
                 'Development',
+                'Skills',
                 'About',
                 'Contact'
             ]
         }
     },
     methods: {
-        closeSidebarPanel: mutations.toggleNav
+        closeSidebarPanel: mutations.closeNav
     },
-    computed: {
-        isPanelOpen() {
-            return store.isNavOpen
-        }
-    }
+    // computed: {
+    //     isPanelOpen() {
+    //         return store.isNavOpen
+    //     }
+    // }
 }
 </script>
 

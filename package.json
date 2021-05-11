@@ -1,5 +1,5 @@
 {
-  "name": "vue-calico",
+  "name": "josh-holladay-portfolio",
   "version": "0.1.0",
   "private": true,
   "description": "## Project setup ``` yarn install ```",
@@ -11,6 +11,7 @@
   },
   "main": "babel.config.js",
   "dependencies": {
+    "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "css-loader": "^5.2.4",
     "firebase": "^8.4.2",

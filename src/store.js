@@ -9,5 +9,8 @@ export const store = Vue.observable({
 export const mutations = {
     toggleNav() {
         store.isNavOpen = !store.isNavOpen
+    },
+    closeNav() {
+        store.isNavOpen = false
     }
 };

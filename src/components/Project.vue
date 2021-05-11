@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="project-wrapper"
-    >
+    <div class="project-wrapper">
         <proj-img
             :imgSrc="imgSrc"
             :name="name"
@@ -40,8 +38,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper-project {
-    display: flex;
-    flex-direction: column;
+.project-wrapper {
+    // display: flex;
+    // flex-direction: column;
+    margin-bottom: 80px;
 }
 </style>
