@@ -1,14 +1,15 @@
 <template>
   <div id="title">
-    <div
-        class="title"
-    >
+    <h1>
         <!-- :style="
             `color: ${color}`,
             `border: 3px solid ${color}`
         " -->
-        {{title.toUpperCase()}}
-    </div>
+        <span class="title">
+          {{title.toUpperCase()}}
+        </span>
+
+    </h1>
   </div>
 </template>
 
@@ -24,15 +25,17 @@
 
 <style lang="scss" scoped>
 .title {
-    font-family: Arial, Helvetica, sans-serif;
-    border: 6px solid black;
-    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 3px solid black;
+    padding: 6px 13px;
     width: auto;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 60px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    width: auto;
+    display: inline-block
 }
-// @media only screen and (min-width: 786px) {
+// @media only screen and (min-width: 900px) {
 //   .logo-kit {
 //     height: 500px;
 //   }

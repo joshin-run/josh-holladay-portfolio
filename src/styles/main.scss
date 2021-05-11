@@ -3,17 +3,19 @@
 // @import 'abstracts/mixins';
 
 // @import 'vendors/bootstrap';
-// @import 'vendors/jquery-ui';
 
 // @import 'base/reset';
-// @import 'base/typography';
+@import './base/_typography';
 
 // @import 'layout/navigation';
 // @import 'layout/grid';
 // @import 'layout/header';
 // @import 'layout/footer';
 // @import 'layout/sidebar';
+@import './layout/_sections';
+@import './layout/_flex';
 // @import 'layout/forms';
+// @import 'layout/_flex'
 
 // @import 'components/buttons';
 // @import 'components/carousel';
@@ -23,5 +25,5 @@
 // @import 'pages/about';
 // @import 'pages/contact';
 
-@import 'themes/_theme';
+// @import 'themes/_theme';
 // @import 'themes/admin';

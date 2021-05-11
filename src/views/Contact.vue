@@ -23,7 +23,7 @@
 .logo-kit {
   height: 400px;
 }
-@media only screen and (min-width: 786px) {
+@media only screen and (min-width: 900px) {
   .logo-kit {
     height: 500px;
   }

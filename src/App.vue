@@ -1,49 +1,54 @@
 <template>
-  <div>
-  <!-- <v-app> -->
+  <div class="app-root">
+  <!-- <div class="app-root" :class="{ hide: isNavOpen }"> -->
     <Header />
-    <Home />
-    <Design />
-    <Development />
-    <About />
-    <Contact />
-    <!-- <v-main>
-      <router-view/>
-    </v-main> -->
-  <!-- </v-app> -->
+    <div class="main-content">
+      <Home />
+      <Projects />
+      <Skills />
+      <About />
+      <Contact />
+    </div>
+    <Sidebar>
+      <nav-mobile />
+   </Sidebar>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Home from './views/Home.vue'
-import Design from './views/Design.vue'
-import Development from './views/Development.vue'
+import Projects from './views/Projects.vue'
+import Skills from './views/Skills.vue'
 import About from './views/About.vue'
 import Contact from './views/Contact.vue'
-
-// import { mapActions } from 'vuex'
+import Sidebar from './components/Sidebar.vue'
+import NavMobile from './components/NavMobile.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     Home,
-    Design,
-    Development,
+    Projects,
+    Skills,
     About,
     Contact,
-  },
-  // methods: {
-  //   ...mapActions(['getUsers'])
-  // },
-  // async created() {
-  //   await this.getUsers()
-  // }
+    Sidebar,
+    NavMobile
+  }
 };
 </script>
 
 <style lang="scss">
-// @import './styles/main.scss';
+.app-root {
+  height:100vh;
+  overflow:hidden;
+}
+
+.main-content {
+  height: 100%;
+  overflow: auto;
+}
 </style>
 

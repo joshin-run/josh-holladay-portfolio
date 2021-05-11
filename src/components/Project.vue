@@ -5,7 +5,6 @@
         <proj-img
             :imgSrc="imgSrc"
             :name="name"
-            :style="{ order: direction }"
         />
         <proj-description
             :title="title"
@@ -32,14 +31,17 @@ export default {
         stack: String,
         description: String
     },
-    computed: {
-        direction() {
-            return this.imgPlacement == 'right' ? 1 : 0
-        }
-    }
+    // computed: {
+    //     direction() {
+    //         $mq === 'laptop' || $mq === 'desktop' ? 'row-reverse'
+    //     }
+    // }
 }
 </script>
 
 <style lang="scss" scoped>
-
+.wrapper-project {
+    display: flex;
+    flex-direction: column;
+}
 </style>

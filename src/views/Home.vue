@@ -1,7 +1,7 @@
 <template>
   <div id="hero">
     <img class="logo-kit" src="@/assets/j-shadow-name.png" />
-    <p class="quote">“Where IMAGINATION & CREATIVITY know no bounds.”</p>
+    <p class="quote">{{quote}}</p>
   </div>
 </template>
 
@@ -9,6 +9,11 @@
 
   export default {
     name: 'Home',
+    data() {
+      return {
+        quote: 'Where IMAGINATION & CREATIVITY know no bounds.'
+      }
+    }
   }
 </script>
 
@@ -20,18 +25,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding: 0px 10px;
+
 }
 .logo-kit {
-  height: 200px;
+  height: 300px;
 }
 .quote {
   color: #FFFFFF;
   font-size: 1.25rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
 }
 // Tablet and Above
-@media only screen and (min-width: 786px) {
+@media only screen and (min-width: 900px) {
   .logo-kit {
     height: 350px;
   }

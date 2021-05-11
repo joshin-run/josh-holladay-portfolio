@@ -15,30 +15,34 @@ export default {
     components: {
         Logo,
         Nav,
-    },
-    computed: {
-        isTrue () {
-            return this.$store.getters.isTrue
-        }
-    },
-    methods: {
-        async toggleMe() {
-            await this.$store.dispatch('toggle')
-        }
     }
+    // computed: {
+    //     isTrue () {
+    //         return this.$store.getters.isTrue
+    //     }
+    // }
+    // methods: {
+    //     async toggleMe() {
+    //         await this.$store.dispatch('toggle')
+    //     }
+    // }
 }
 </script>
 <style scoped>
 .header {
     box-shadow: none !important;
     background-color: #83C4FF;
-    height: 80px;
+    height: 60px;
     /* padding: 10px 20px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .header {
+      height: 80px;
+  }
 }
 </style>

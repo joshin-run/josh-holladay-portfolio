@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'Media',
     data () {
@@ -34,6 +33,11 @@ export default {
                     type: 'github',
                     link: 'https://github.com/joshin-run',
                     img: 'icon-gh'
+                },
+                {
+                    type: 'email',
+                    link: 'mailto:iamjoshholladay@gmail.com',
+                    img: 'icon-em'
                 },
                 {
                     type: 'medium',

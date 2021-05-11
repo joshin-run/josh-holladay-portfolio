@@ -18,7 +18,7 @@ export default {
     },
     data() {
         return {
-            imgSrc2: '../assets/projects/portfolio-hero.png'
+            imgSrc2: '../assets/projects/portfolio-hero.png',
         }
     }
 }
@@ -26,6 +26,15 @@ export default {
 
 <style lang="scss" scoped>
 .proj-img {
-    height: 500px;
+    width: 100%;
+    // max-width: 90vw;
+    height: auto;
+}
+@media only screen and (min-width: 900px) {
+  .proj-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
 }
 </style>

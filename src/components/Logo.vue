@@ -16,7 +16,8 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    // padding: 30px;
+    margin: 4px 0 0 17px;
     padding-right: 45px;
     .logo {
         height: 30px;
