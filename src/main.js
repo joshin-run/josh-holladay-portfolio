@@ -4,6 +4,7 @@ import VueMq from 'vue-mq'
 import './styles/main.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import "@/assets/styles/main.css";
 // ..
 AOS.init({
   // Global settings:

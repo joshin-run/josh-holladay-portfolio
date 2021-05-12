@@ -7,7 +7,7 @@
       :description="description"
     />
     <a :href="btnLink" target="_blank">
-      <button class="btn">VIEW SITE</button>
+      <button class="btn">{{btnText.toUpperCase()}}</button>
     </a>
   </div>
 </template>
@@ -29,6 +29,10 @@ export default {
     stack: String,
     description: String,
     btnLink: String,
+    btnText: {
+      type: String,
+      default: 'View More'
+    }
   },
 };
 </script>

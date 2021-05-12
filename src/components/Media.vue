@@ -22,7 +22,7 @@ export default {
       icons: [
         {
           type: "behance",
-          link: "https://www.behance.net/josh852a",
+          link: "https://www.behance.net/josh-holladay",
           img: "icon-be",
         },
         {

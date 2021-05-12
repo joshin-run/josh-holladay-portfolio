@@ -10,16 +10,16 @@
 
 <script>
 export default {
-    name: 'ProjImg',
-    props: {
-        imgSrc: String,
-        name: String
-    },
-    data() {
-        return {
-            imgSrc2: '../assets/projects/portfolio-hero.png',
-        }
+  name: 'ProjImg',
+  props: {
+    imgSrc: String,
+    name: String
+  },
+  data() {
+    return {
+      imgSrc2: '../assets/projects/portfolio-hero.png',
     }
+  }
 }
 </script>
 

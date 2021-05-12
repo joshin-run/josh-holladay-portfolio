@@ -1,10 +1,11 @@
 <template>
   <div id="projects" class="page-wrapper">
     <div class="content-wrapper">
-      <div id="design">
+      <div>
         <Title
           :title="'Design'"
           :color="'#303030'"
+          :id="'design'"
         />
       </div>
       <div
@@ -13,12 +14,11 @@
       >
         <Project
           :imgSrc="desProj.imgSrc"
-          :name="desProj.name"
-          :imgPlacement="desProj.imgPlacement"
           :title="desProj.title"
           :stack="desProj.stack"
           :description="desProj.description"
           :btnLink="desProj.btnLink"
+          :btnText="desProj.btnText"
         />
       </div>
     </div>
@@ -27,17 +27,17 @@
         <Title
           :title="'Development'"
           :color="'#303030'"
+          :id="'development'"
         />
       </div>
       <div v-for="(devProj,index) in developmentProjects" :key="index">
         <Project
           :imgSrc="devProj.imgSrc"
-          :name="devProj.name"
-          :imgPlacement="devProj.imgPlacement"
           :title="devProj.title"
           :stack="devProj.stack"
           :description="devProj.description"
           :btnLink="devProj.btnLink"
+          :btnText="devProj.btnText"
         />
       </div>
     </div>
@@ -59,50 +59,61 @@ export default {
       designProjects: [
         {
           imgSrc: 'crescendo/crescendo-hero',
-          name: 'Crescendo Digital Marketing',
-          imgPlacement: '',
           title: 'Crescendo Digital Marketing',
           stack: 'Branding / UI / Figma / Founder',
           description: 'A sales funnel for a Real Estate Marketing Agency. Are you a broker or agent looking to extend your marketing reach? Look no further than Crescendo, a lead generation machine.',
-          btnLink: 'http://gocrescendo.com'
+          btnLink: 'http://gocrescendo.com',
+          btnText: 'View Site',
         },
         {
-          imgSrc: 'logos/logos',
-          name: 'Josh Holladay Portfolio',
-          imgPlacement: '',
-          title: 'Portfolio',
+          imgSrc: 'logoDesign/logo-design-concept-site',
+          title: 'Logo Design Website Concept',
           stack: 'Vue / Sass',
           description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-          btnLink: ''
+          btnLink: 'https://www.behance.net/gallery/62614073/LogoDesign-Code-Blue',
+          btnText: 'View Design',
         },
         {
-          imgSrc: 'crescendo/crescendo-hero',
-          name: 'Josh Holladay Portfolio',
-          imgPlacement: '',
-          title: 'Portfolio',
+          imgSrc: 'adGraphics/ad-graphics',
+          title: 'Marketing Ad Graphics',
           stack: 'Vue / Sass',
           description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-          btnLink: ''
+          btnLink: 'https://dribbble.com/joshholladay',
+          btnText: 'View More',
+        },
+        {
+          imgSrc: 'logos/logos2',
+          title: 'Logos',
+          stack: 'Vue / Sass',
+          description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          btnLink: 'https://dribbble.com/joshholladay',
+          btnText: 'View More',
         },
       ],
       developmentProjects: [
         {
           imgSrc: 'portfolio/portfolio-hero',
-          name: 'Portfolio',
-          imgPlacement: 'right',
           title: 'Portfolio',
           stack: 'JS / Vue',
           description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-          btnLink: ''
+          btnLink: 'https://github.com/joshin-run/josh-holladay-portfolio',
+          btnText: 'View Code',
         },
         {
-          imgSrc: 'portfolio/portfolio-hero',
-          name: 'name',
-          imgPlacement: 'right',
-          title: 'title',
-          stack: 'stack / stack',
+          imgSrc: 'nuskin/nuskin',
+          title: 'Portfolio',
+          stack: 'JS / Vue',
           description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-          btnLink: ''
+          btnLink: 'https://github.com/joshin-run/josh-holladay-portfolio',
+          btnText: 'View Code',
+        },
+        {
+          imgSrc: 'enso/enso',
+          title: 'Portfolio',
+          stack: 'JS / Vue',
+          description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          btnLink: 'https://github.com/joshin-run/josh-holladay-portfolio',
+          btnText: 'View Code',
         },
       ]
     }

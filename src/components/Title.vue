@@ -1,6 +1,6 @@
 <template>
   <div id="title">
-    <h2 class="title" :style="{ color: color }">
+    <h2 :id="id" class="title" :style="{ color: color }">
       {{ title.toUpperCase() }}
     </h2>
   </div>
@@ -12,6 +12,10 @@ export default {
   props: {
     title: String,
     color: String,
+    id: {
+      type: String,
+      default: ''
+    }
   },
 };
 </script>

@@ -8182,6 +8182,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+vue-cli-plugin-tailwindcss@~0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-tailwindcss/-/vue-cli-plugin-tailwindcss-0.1.1.tgz#e961e6f70a621fdbbf7b86b72cf065e7631d4c93"
+  integrity sha512-7c1xtywUI80wSkLeiJEdCBIpiNbqlUm053hoysOWOMYOa4bFfZgj6OmZk+1X6NSDP34C+i0mklIebzQf5apEvQ==
+
 vue-eslint-parser@^7.0.0:
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.6.0.tgz#01ea1a2932f581ff244336565d712801f8f72561"

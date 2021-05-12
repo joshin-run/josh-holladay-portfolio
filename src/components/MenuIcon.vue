@@ -16,16 +16,16 @@
 import { store, mutations } from '@/store.js'
 
 export default {
-    computed: {
-        isMenuIconActive() {
-            return store.isNavOpen
-        }
-    },
-    methods: {
-        toggle() {
-            mutations.toggleNav()
-        }
+  computed: {
+    isMenuIconActive() {
+      return store.isNavOpen
     }
+  },
+  methods: {
+    toggle() {
+      mutations.toggleNav()
+    }
+  }
 }
 </script>
 <style>

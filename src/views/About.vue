@@ -1,9 +1,10 @@
 <template>
-  <div id="about" class="page-wrapper">
+  <div class="about page-wrapper">
     <div class="content-wrapper">
       <Title
         :title="'About'"
         :color="'#303030'"
+        :id="'about'"
       />
       <div class="about-content">
         <div class="avatar">
@@ -52,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#about {
+.about {
   display: flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #00F9F9;

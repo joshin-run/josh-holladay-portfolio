@@ -4,8 +4,8 @@
       <Title
         :title="'Skills'"
         :color="'#626262'"
+        :id="'skills'"
       />
-      <span v-for="item in test" :key="item">{{item}}</span>
       <div
         v-for="(category,index) in categories"
         :key="index"

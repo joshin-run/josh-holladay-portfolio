@@ -7,14 +7,14 @@
 
 <script>
 
-  export default {
-    name: 'Home',
-    data() {
-      return {
-        quote: 'Where IMAGINATION & CREATIVITY know no bounds.'
-      }
+export default {
+  name: 'Home',
+  data() {
+    return {
+      quote: 'Where IMAGINATION & CREATIVITY know no bounds.'
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>

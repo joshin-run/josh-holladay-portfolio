@@ -27,6 +27,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.32.0",
     "sass-loader": "^10",
+    "vue-cli-plugin-tailwindcss": "~0.1.1",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -42,7 +43,10 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "indent": ["error", 2]
+      "indent": [
+        "error",
+        2
+      ]
     }
   },
   "browserslist": [

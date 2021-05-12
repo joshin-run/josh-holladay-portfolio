@@ -8,12 +8,12 @@
 
 <script>
 export default {
-    name: 'ProjDescription',
-    props: {
-        title: String,
-        stack: String,
-        description: String
-    }
+  name: 'ProjDescription',
+  props: {
+    title: String,
+    stack: String,
+    description: String
+  }
 }
 </script>
 
