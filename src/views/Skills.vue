@@ -1,5 +1,5 @@
 <template>
-  <div id="skills" class="page-wrapper">
+  <div class="skills page-wrapper">
     <div class="content-wrapper">
       <Title
         :title="'Skills'"
@@ -114,7 +114,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#skills {
+.skills {
   background-color: #303030;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   .category-container {
@@ -140,7 +140,7 @@ export default {
   }
 }
 @media only screen and (min-width: 900px) {
-  #skills {
+  .skills {
     .skill {
       p {
         font-size: 1rem;

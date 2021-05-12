@@ -1,7 +1,7 @@
 <template>
   <div id="projects" class="page-wrapper">
     <div class="content-wrapper">
-      <div>
+      <div id="design">
         <Title
           :title="'Design'"
           :color="'#303030'"
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="content-wrapper development">
-      <div>
+      <div id="development">
         <Title
           :title="'Development'"
           :color="'#303030'"
@@ -48,66 +48,66 @@
 import Title from '../components/Title.vue'
 import Project from '../components/Project.vue'
 
-  export default {
-    name: 'Projects',
-    components: {
-      Title,
-      Project
-    },
-    data() {
-      return {
-        designProjects: [
-          {
-            imgSrc: 'crescendo/crescendo-hero',
-            name: 'Crescendo Digital Marketing',
-            imgPlacement: '',
-            title: 'Crescendo Digital Marketing',
-            stack: 'Branding / UI / Figma / Founder',
-            description: 'A sales funnel for a Real Estate Marketing Agency. Are you a broker or agent looking to extend your marketing reach? Look no further than Crescendo, a lead generation machine.',
-            btnLink: 'http://gocrescendo.com'
-          },
-          {
-            imgSrc: 'crescendo/crescendo-hero',
-            name: 'Josh Holladay Portfolio',
-            imgPlacement: '',
-            title: 'Portfolio',
-            stack: 'Vue / Sass',
-            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-            btnLink: ''
-          },
-          {
-            imgSrc: 'crescendo/crescendo-hero',
-            name: 'Josh Holladay Portfolio',
-            imgPlacement: '',
-            title: 'Portfolio',
-            stack: 'Vue / Sass',
-            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-            btnLink: ''
-          },
-        ],
-        developmentProjects: [
-          {
-            imgSrc: 'portfolio/portfolio-hero',
-            name: 'Portfolio',
-            imgPlacement: 'right',
-            title: 'Portfolio',
-            stack: 'JS / Vue',
-            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-            btnLink: ''
-          },
-          {
-            imgSrc: 'portfolio/portfolio-hero',
-            name: 'name',
-            imgPlacement: 'right',
-            title: 'title',
-            stack: 'stack / stack',
-            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
-            btnLink: ''
-          },
-        ]
-      }
+export default {
+  name: 'Projects',
+  components: {
+    Title,
+    Project
+  },
+  data() {
+    return {
+      designProjects: [
+        {
+          imgSrc: 'crescendo/crescendo-hero',
+          name: 'Crescendo Digital Marketing',
+          imgPlacement: '',
+          title: 'Crescendo Digital Marketing',
+          stack: 'Branding / UI / Figma / Founder',
+          description: 'A sales funnel for a Real Estate Marketing Agency. Are you a broker or agent looking to extend your marketing reach? Look no further than Crescendo, a lead generation machine.',
+          btnLink: 'http://gocrescendo.com'
+        },
+        {
+          imgSrc: 'logos/logos',
+          name: 'Josh Holladay Portfolio',
+          imgPlacement: '',
+          title: 'Portfolio',
+          stack: 'Vue / Sass',
+          description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          btnLink: ''
+        },
+        {
+          imgSrc: 'crescendo/crescendo-hero',
+          name: 'Josh Holladay Portfolio',
+          imgPlacement: '',
+          title: 'Portfolio',
+          stack: 'Vue / Sass',
+          description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          btnLink: ''
+        },
+      ],
+      developmentProjects: [
+        {
+          imgSrc: 'portfolio/portfolio-hero',
+          name: 'Portfolio',
+          imgPlacement: 'right',
+          title: 'Portfolio',
+          stack: 'JS / Vue',
+          description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          btnLink: ''
+        },
+        {
+          imgSrc: 'portfolio/portfolio-hero',
+          name: 'name',
+          imgPlacement: 'right',
+          title: 'title',
+          stack: 'stack / stack',
+          description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+          btnLink: ''
+        },
+      ]
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>

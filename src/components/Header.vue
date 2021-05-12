@@ -1,48 +1,47 @@
 <template>
-    <div class="header">
-        <!-- <img class="logo" src="@/assets/icons/icon-j.png" /> -->
-        <Logo />
-        <Nav />
-    </div>
+  <div class="header">
+    <!-- <img class="logo" src="@/assets/icons/icon-j.png" /> -->
+    <Logo />
+    <Nav />
+  </div>
 </template>
 
 <script>
-import Nav from './Nav.vue'
-import Logo from './Logo.vue'
+import Nav from "./Nav.vue";
+import Logo from "./Logo.vue";
 
 export default {
-    name: 'Header',
-    components: {
-        Logo,
-        Nav,
-    }
-    // computed: {
-    //     isTrue () {
-    //         return this.$store.getters.isTrue
-    //     }
-    // }
-    // methods: {
-    //     async toggleMe() {
-    //         await this.$store.dispatch('toggle')
-    //     }
-    // }
-}
+  name: "Header",
+  components: {
+    Logo,
+    Nav,
+  },
+  // computed: {
+  //     isTrue () {
+  //         return this.$store.getters.isTrue
+  //     }
+  // }
+  // methods: {
+  //     async toggleMe() {
+  //         await this.$store.dispatch('toggle')
+  //     }
+  // }
+};
 </script>
 <style scoped>
 .header {
-    box-shadow: none !important;
-    background-color: #83C4FF;
-    height: 60px;
-    /* padding: 10px 20px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  box-shadow: none !important;
+  background-color: #83c4ff;
+  height: 60px;
+  padding: 15px 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (min-width: 900px) {
   .header {
-      height: 80px;
+    height: 80px;
   }
 }
 </style>

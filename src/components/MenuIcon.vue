@@ -61,7 +61,7 @@ export default {
         top: 50%;
         right: 6px;
         left: 6px;
-        height: 2px;
+        height: 3px;
         width: auto;
         margin-top: -1px;
         transition: transform .6s cubic-bezier(.165,.84,.44,1),opacity .3s cubic-bezier(.165,.84,.44,1),background-color .6s cubic-bezier(.165,.84,.44,1);
@@ -69,12 +69,12 @@ export default {
 
     .menu-icon-bar--1 {
         -webkit-transform: translateY(-6px);
-        transform: translateY(-6px);
+        transform: translateY(-8px);
     }
 
     .menu-icon-bar--2 {
         transform-origin: 100% 50%;
-        transform: scaleX(.8);
+        /* transform: scaleX(.8); */
     }
 
     .menu-icon-button:hover .menu-icon-bar--2 {
@@ -86,7 +86,7 @@ export default {
     }
 
     .menu-icon-bar--3 {
-        transform: translateY(6px);
+        transform: translateY(8px);
     }
 
     #menu-icon.active .menu-icon-button {

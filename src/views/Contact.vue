@@ -1,9 +1,10 @@
 <template>
-  <div id="contact" class="page-wrapper">
+  <div class="contact page-wrapper">
     <div class="content-wrapper">
       <Title
         :title="'Contact'"
         :color="'#FFFFFF'"
+        id="contact"
       />
       <div class="contact-content">
         <div class="email-icon">
@@ -26,7 +27,6 @@
 import Title from '../components/Title.vue'
 
 export default {
-  name: 'About',
   components: {
     Title
   },
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#contact {
+.contact {
   display: flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #83C4FF;
