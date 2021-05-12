@@ -136,6 +136,13 @@ export default {
       margin: 5px 3px;
       padding: 10px 18px;
       font-weight: 600;
+      transition: 0.35s ease-in-out;
+      &:hover {
+        border: 3px solid #f57f00;
+        color: #f57f00;
+        // border: 3px solid #52acff;
+        // color: #52acff;
+      }
     }
   }
 }

@@ -16,6 +16,7 @@
           <div class="content" v-for="(content,index) in contents" :key="index">
             <p class="title">{{content.title}}</p>
             <p class="text">{{content.text1}}</p>
+            <p class="text">{{content.text2}}</p>
           </div>
         </div>
       </div>
@@ -35,7 +36,8 @@ export default {
       contents: [
         {
           title: 'CLICK THE ICON ABOVE . . .',
-          text1: 'I am currently looking to pick up additional freelance projects. Click the icon above to send me an email with any questions or to request my resume. I\'d love to chat about your next GREAT IDEA to see if we might be a fit. Thank you for your consideration and let\'s talk soon!',
+          text1: 'I am currently looking to pick up additional freelance projects. Click the icon above to send me an email with any questions or to request my resume. I\'d love to chat about your next GREAT IDEA to see if we might be a fit.',
+          text2: 'Thank you for your consideration and let\'s talk soon!',
         },
       ]
     }
@@ -55,6 +57,13 @@ export default {
     justify-content: center;
     img {
       width: 175px;
+      /* Start the shake animation and make the animation last for 0.5 seconds */
+      // animation: shake 0.25s;
+      animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+      // animation-delay: 3s;
+
+      /* When the animation is finished, start again */
+      animation-iteration-count: infinite;
     }
   }
 }
@@ -70,6 +79,31 @@ p.title {
 p.text {
   margin-bottom: 15px;
   line-height: 1.5;
+}
+
+@keyframes shake {
+  // 0% { transform: translate(1px, 1px) rotate(0deg); }
+  // 10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  // 10% { transform: translate(-1px, 0px) rotate(0deg); }
+  // 30% { transform: translate(1px, 1px) rotate(-1deg); }
+  // 40% { transform: translate(1px, -1px) rotate(0deg); }
+  // 50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  // 60% { transform: translate(-1px, 1px) rotate(0deg); }
+  // 70% { transform: translate(1px, 1px) rotate(-1deg); }
+  // 80% { transform: translate(-1px, -1px) rotate(0deg); }
+  // 90% { transform: translate(1px, 1px) rotate(-1deg); }
+  // 100% { transform: translate(1px, -1px) rotate(0deg); }
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 @media only screen and (min-width: 900px) {
   #about {

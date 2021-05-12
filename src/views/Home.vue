@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <img class="logo-kit" src="@/assets/j-shadow-name.png" />
+    <img class="logo-kit" src="@/assets/j-shadow-name-2.png" />
     <p class="quote">{{quote}}</p>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div id="title">
+  <div>
     <h2 :id="id" class="title" :style="{ color: color }">
       {{ title.toUpperCase() }}
     </h2>
@@ -29,6 +29,10 @@ export default {
   font-weight: 600;
   margin-bottom: 30px;
   width: auto;
+}
+h2 {
+  padding: 0;
+  margin: 0;
 }
 @media only screen and (min-width: 1200px) {
   .title {
