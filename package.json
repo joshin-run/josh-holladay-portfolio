@@ -14,28 +14,20 @@
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "css-loader": "^5.2.4",
-    "firebase": "^8.4.2",
     "vue": "^2.6.11",
     "vue-mq": "1.0.1",
-    "vue-router": "^3.2.0",
-    "vue-style-loader": "^4.1.3",
-    "vuelidate": "^0.7.6",
-    "vuetify": "^2.4.11",
-    "vuex": "^3.6.2"
+    "vue-style-loader": "^4.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.32.0",
     "sass-loader": "^10",
-    "vue-cli-plugin-vuetify": "~2.4.0",
-    "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.7.0"
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
@@ -57,13 +49,12 @@
     "not dead"
   ],
   "bugs": {
-    "url": "https://github.com/joshin-run/vue-calico/issues"
+    "url": "https://github.com/joshin-run/josh-holladay-portfolio/issues"
   },
-  "homepage": "https://github.com/joshin-run/vue-calico#readme",
+  "homepage": "https://github.com/joshin-run/josh-holladay-portfolio#readme",
   "license": "ISC",
-  "proxy": "http://localhost:5001",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshin-run/vue-calico.git"
+    "url": "git+https://github.com/joshin-run/josh-holladay-portfolio.git"
   }
 }

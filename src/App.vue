@@ -1,6 +1,5 @@
 <template>
   <div class="app-root">
-  <!-- <div class="app-root" :class="{ hide: isNavOpen }"> -->
     <Header />
     <div class="main-content">
       <Home />

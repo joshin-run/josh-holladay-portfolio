@@ -114,15 +114,6 @@ import Project from '../components/Project.vue'
 #projects {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  // padding: 50px 0;
-  // max-width: 1200px;
-  // margin: 0 auto;
-  // .design-content,
-  // .development-content {
-  //   width: 100%;
-  //   padding: 0 30px;
-  // }
 }
 @media only screen and (min-width: 1201px) {
   #projects {

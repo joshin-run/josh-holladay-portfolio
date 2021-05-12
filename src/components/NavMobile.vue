@@ -41,11 +41,6 @@ export default {
     methods: {
         closeSidebarPanel: mutations.closeNav
     },
-    // computed: {
-    //     isPanelOpen() {
-    //         return store.isNavOpen
-    //     }
-    // }
 }
 </script>
 
@@ -60,12 +55,6 @@ export default {
     align-items: center;
     width: 100%;
 }
-// .img-wrapper {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-end;
-//     align-items: center;
-// }
 .nav-links {
     display: inline-block;
     line-height: 2.5;

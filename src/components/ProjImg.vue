@@ -28,7 +28,6 @@ export default {
     margin-bottom: 15px;
     .proj-img {
         width: 100%;
-        // max-width: 90vw;
         height: auto;
     }
 }

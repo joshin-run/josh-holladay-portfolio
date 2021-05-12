@@ -56,7 +56,6 @@ export default {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    // width: 100%;
     margin-right: 20px;
 }
 .icon-link {
@@ -64,7 +63,6 @@ export default {
     margin-right: 20px;
     color: black;
     text-transform: uppercase;
-    // font-family: Montserrat;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 1.25rem;

@@ -78,6 +78,7 @@ export default {
             'rxjs',
             'sass',
             'storybook',
+            'typescript',
             'vue',
             'vuex',
             'Web Development',
@@ -137,15 +138,6 @@ export default {
       font-weight: 600;
     }
   }
-  // padding: 50px 0;
-  // max-width: 1200px;
-  // padding: 50px auto;
-  // width: 100%;
-  // .skills-content {
-  //   // padding: 0 0;
-  //   max-width: 1200px;
-  //   margin: 0 auto;
-  // }
 }
 @media only screen and (min-width: 900px) {
   #skills {

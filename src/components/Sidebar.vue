@@ -48,8 +48,6 @@ export default {
     }
 
     .sidebar-panel {
-        /* overflow-y: auto; */
-        /* overflow-y: auto; */
         background-color: #A1D2FF;
         border-right: 3px solid #76BEFF;
         position: fixed;
@@ -58,7 +56,6 @@ export default {
         height: 100vh;
         z-index: 999;
         padding: 15px 15px 15px 30px;
-        /* padding: 3rem 20px 2rem 20px; */
         width: 300px;
     }
 </style>

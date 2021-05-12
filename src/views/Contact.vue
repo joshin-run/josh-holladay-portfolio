@@ -47,21 +47,11 @@ export default {
 #contact {
   display: flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  // flex-direction: column;
   background-color: #83C4FF;
   color: #FFFFFF;
-  // padding: 50px 0;
-  // max-width: 1200px;
-  // margin: 0 auto;
-  // .design-content,
-  // .development-content {
-  //   width: 100%;
-  //   padding: 0 30px;
-  // }
   .email-icon {
     margin: 10px 0 50px 0;
     display: flex;
-    // flex-direction: row;
     justify-content: center;
     img {
       width: 175px;
@@ -81,15 +71,8 @@ p.text {
   margin-bottom: 15px;
   line-height: 1.5;
 }
-// @media only screen and (min-width: 1201px) {
-//   .contact-content {
-//     flex-direction: column;
-//   }
-// }
 @media only screen and (min-width: 900px) {
   #about {
-      // flex-direction: row;
-    // }
     .email-icon {
       flex-direction: row;
       img {

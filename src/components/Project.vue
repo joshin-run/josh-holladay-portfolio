@@ -33,18 +33,11 @@ export default {
         description: String,
         btnLink: String,
     },
-    // computed: {
-    //     direction() {
-    //         $mq === 'laptop' || $mq === 'desktop' ? 'row-reverse'
-    //     }
-    // }
 }
 </script>
 
 <style lang="scss" scoped>
 .project-wrapper {
-    // display: flex;
-    // flex-direction: column;
     margin-bottom: 80px;
     proj-description {
         margin-bottom: 20px;

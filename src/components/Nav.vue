@@ -13,11 +13,6 @@
                 v-if="$mq === 'mobile' || $mq === 'tablet'"
                 class="menu-icon"
             />
-            <!-- <img
-                v-if="$mq === 'mobile' || $mq === 'tablet'"
-                src="@/assets/icons/hamburger-menu.png"
-                @click="overlay"
-            /> -->
         </div>
     </div>
 
@@ -62,9 +57,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    // justify-content: space-between;
     align-items: center;
-    // width: 100%;
 }
 .nav-links {
     display: flex;
@@ -78,10 +71,7 @@ export default {
     margin-right: 30px;
     color: black;
     text-transform: uppercase;
-    // font-family: Montserrat;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    // font-family: Arial, Helvetica, sans-serif;
-    // font-weight: 400;
     font-size: .95rem;
     color: #FFFFFF;
     &:hover{
@@ -101,8 +91,5 @@ export default {
         height: 45px;
         margin-right: 30px;
     }
-    // .nav-link {
-    //     font-size:
-    // }
 }
 </style>

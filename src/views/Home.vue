@@ -37,7 +37,6 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
 }
-// Tablet and Above
 @media only screen and (min-width: 900px) {
   .logo-kit {
     height: 350px;

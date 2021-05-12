@@ -39,7 +39,6 @@ export default {
     }
     .description {
         color: #626262;
-        // font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 25px;
     }

@@ -4,7 +4,7 @@
 
 // @import 'vendors/bootstrap';
 
-// @import 'base/reset';
+@import './base/_reset';
 @import './base/_typography';
 
 // @import 'layout/navigation';
@@ -12,7 +12,6 @@
 // @import 'layout/header';
 // @import 'layout/footer';
 // @import 'layout/sidebar';
-@import './layout/_sections';
 @import './layout/_flex';
 // @import 'layout/forms';
 // @import 'layout/_flex'
