@@ -34,7 +34,6 @@ export default {
         transition: 0.5s ease-in-out;
         &:hover {
           box-shadow: 0 12px 10px -9px rgb(0,0,0,0.4);
-          // box-shadow: 0 15px 12px -9px rgb(0,0,0,0.4);
         }
     }
 }

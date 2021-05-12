@@ -2,13 +2,11 @@
     <div id="menu-icon"
          :class="{ 'active' : isMenuIconActive }"
          @click.prevent="toggle">
-        <!-- <slot> -->
-            <button type="button" class="menu-icon-button" title="Menu">
-                <span class="menu-icon-bar menu-icon-bar--1"></span>
-                <span class="menu-icon-bar menu-icon-bar--2"></span>
-                <span class="menu-icon-bar menu-icon-bar--3"></span>
-            </button>
-        <!-- </slot> -->
+          <button type="button" class="menu-icon-button" title="Menu">
+              <span class="menu-icon-bar menu-icon-bar--1"></span>
+              <span class="menu-icon-bar menu-icon-bar--2"></span>
+              <span class="menu-icon-bar menu-icon-bar--3"></span>
+          </button>
     </div>
 </template>
 

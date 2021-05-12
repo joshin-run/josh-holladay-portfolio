@@ -36,6 +36,9 @@ export default {
     Sidebar,
     NavMobile,
   },
+  created() {
+    history.pushState("", document.title, window.location.pathname + window.location.search)
+  }
 };
 </script>
 
