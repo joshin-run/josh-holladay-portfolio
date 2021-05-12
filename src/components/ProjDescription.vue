@@ -1,5 +1,5 @@
 <template>
-    <div class="proj-img">
+    <div class="proj-description">
         <p class="title">{{title.toUpperCase()}}</p>
         <p class="stack">{{stack.toUpperCase()}}</p>
         <p class="description">{{description}}</p>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.proj-img {
+.proj-description {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     .title,
     .stack,
@@ -35,23 +35,26 @@ export default {
         font-weight: 600;
         color: #2C9BFF;
         font-size: .85rem;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     .description {
         color: #626262;
         // font-size: 1rem;
         line-height: 1.5;
+        margin-bottom: 25px;
     }
 }
 @media only screen and (min-width: 900px) {
-  .title {
-    font-size: 2rem;
-  }
-  .stack {
-      font-size: 1.15rem;
-  }
-  .description {
-    font-size: 1.15rem;
-  }
+    .proj-description {
+        .title {
+            font-size: 2rem;
+        }
+        .stack {
+            font-size: 1.15rem;
+        }
+        .description {
+            font-size: 1.15rem;
+        }
+    }
 }
 </style>

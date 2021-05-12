@@ -67,7 +67,7 @@ export default {
   //   padding: 0 30px;
   // }
   .avatar {
-    margin-bottom: 40px;
+    margin: 10px 0 50px 0;
     display: flex;
     // flex-direction: row;
     justify-content: center;

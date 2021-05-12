@@ -9,6 +9,9 @@
             :stack="stack"
             :description="description"
         />
+        <a href="http://gocrescendo.com">
+            <button class="btn">VIEW SITE</button>
+        </a>
     </div>
 </template>
 
@@ -42,5 +45,8 @@ export default {
     // display: flex;
     // flex-direction: column;
     margin-bottom: 80px;
+    proj-description {
+        margin-bottom: 20px;
+    }
 }
 </style>
