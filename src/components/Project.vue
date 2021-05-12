@@ -9,7 +9,7 @@
             :stack="stack"
             :description="description"
         />
-        <a href="http://gocrescendo.com">
+        <a :href="btnLink" target="_blank">
             <button class="btn">VIEW SITE</button>
         </a>
     </div>
@@ -30,7 +30,8 @@ export default {
         imgPlacement: String,
         title: String,
         stack: String,
-        description: String
+        description: String,
+        btnLink: String,
     },
     // computed: {
     //     direction() {

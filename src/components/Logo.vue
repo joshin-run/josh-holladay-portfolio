@@ -1,6 +1,6 @@
 <template>
     <div class="logo-wrapper">
-        <img class="logo" src="@/assets/icons/icon-j.png" />
+        <a href="#home"><img class="logo" src="@/assets/icons/icon-j.png" /></a>
     </div>
 </template>
 

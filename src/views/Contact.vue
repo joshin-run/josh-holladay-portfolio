@@ -7,7 +7,7 @@
       />
       <div class="contact-content">
         <div class="email-icon">
-          <a href="mailto:iamjoshholladay@gmail.com">
+          <a href="mailto:iamjoshholladay@gmail.com" target="_blank">
             <img src="@/assets/icons/icon-em.png" />
           </a>
         </div>

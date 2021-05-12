@@ -18,6 +18,7 @@
           :title="desProj.title"
           :stack="desProj.stack"
           :description="desProj.description"
+          :btnLink="desProj.btnLink"
         />
       </div>
     </div>
@@ -36,6 +37,7 @@
           :title="devProj.title"
           :stack="devProj.stack"
           :description="devProj.description"
+          :btnLink="devProj.btnLink"
         />
       </div>
     </div>
@@ -60,8 +62,9 @@ import Project from '../components/Project.vue'
             name: 'Crescendo Digital Marketing',
             imgPlacement: '',
             title: 'Crescendo Digital Marketing',
-            stack: 'Vue / Sass',
-            description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+            stack: 'Branding / UI / Figma / Founder',
+            description: 'A sales funnel for a Real Estate Marketing Agency. Are you a broker or agent looking to extend your marketing reach? Look no further than Crescendo, a lead generation machine.',
+            btnLink: 'http://gocrescendo.com'
           },
           {
             imgSrc: 'crescendo/crescendo-hero',
@@ -70,6 +73,7 @@ import Project from '../components/Project.vue'
             title: 'Portfolio',
             stack: 'Vue / Sass',
             description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+            btnLink: ''
           },
           {
             imgSrc: 'crescendo/crescendo-hero',
@@ -78,6 +82,7 @@ import Project from '../components/Project.vue'
             title: 'Portfolio',
             stack: 'Vue / Sass',
             description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+            btnLink: ''
           },
         ],
         developmentProjects: [
@@ -88,6 +93,7 @@ import Project from '../components/Project.vue'
             title: 'Portfolio',
             stack: 'JS / Vue',
             description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+            btnLink: ''
           },
           {
             imgSrc: 'portfolio/portfolio-hero',
@@ -96,6 +102,7 @@ import Project from '../components/Project.vue'
             title: 'title',
             stack: 'stack / stack',
             description: 'I grew up in sunny California in a family that included a twin sister. My days were spent drawing, typing, writing, singing, playing piano, playing chess, and running cross country. I still do some of these things today and have added playing table tennis, Shogi, Xiangqi, video editing, music video creation, and entrepreneurship.',
+            btnLink: ''
           },
         ]
       }

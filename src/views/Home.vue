@@ -1,5 +1,5 @@
 <template>
-  <div id="hero">
+  <div id="home">
     <img class="logo-kit" src="@/assets/j-shadow-name.png" />
     <p class="quote">{{quote}}</p>
   </div>
@@ -18,7 +18,7 @@
 </script>
 
 <style lang="scss" scoped>
-#hero {
+#home {
   background-color: #83C4FF;
   height: 100vh;
   display: flex;
