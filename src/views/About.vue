@@ -36,7 +36,7 @@ export default {
       contents: [
         {
           title: 'Into the Professional',
-          text1: 'Hello, I\'m Josh. I have been a Front-end Developer and Designer for over 4 years. I\'ve touched a lot of technology during my career and have met some incredable people. I am grateful for the opportunities that I have had.',
+          text1: 'Hello, I\'m Josh. I have been a Front-end Developer and Designer for over 4 years. I\'ve touched a lot of technology during my career and have met some incredible people. I am grateful for the opportunities that I have had.',
           text2: 'I\'ve remained mainly in the Front-end space which has allowed me to retain my creativity and design skills. Visual design has proven to be one of my greatest assets as a Web Developer. I\'m an artist at heart and with my creative mind, I can approach a problem from many different angles. I\'ve also worked closely with stake holders on the UX Design front where I enjoy increased personal interaction focused on business strategies.',
           text3: 'One of the greatest balancing acts as a Software Engineer is to learn enough about the users\' wants and needs to know the difference between the two...and to choose what is best for them even when they don\'t always quite know for themselves.',
         },

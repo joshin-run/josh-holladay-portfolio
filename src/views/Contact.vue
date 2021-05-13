@@ -57,12 +57,7 @@ export default {
     justify-content: center;
     img {
       width: 175px;
-      /* Start the shake animation and make the animation last for 0.5 seconds */
-      // animation: shake 0.25s;
-      animation: fastshake 5s ease both;
-      // animation-delay: 3s;
-
-      /* When the animation is finished, start again */
+      animation: fastshake 3s ease both;
       animation-iteration-count: infinite;
     }
   }
@@ -79,32 +74,6 @@ p.title {
 p.text {
   margin-bottom: 15px;
   line-height: 1.5;
-}
-
-@keyframes shake {
-  // 0% { transform: translate(1px, 1px) rotate(0deg); }
-  // 10% { transform: translate(-1px, -1px) rotate(-1deg); }
-  // 10% { transform: translate(-1px, 0px) rotate(0deg); }
-  // 30% { transform: translate(1px, 1px) rotate(-1deg); }
-  // 40% { transform: translate(1px, -1px) rotate(0deg); }
-  // 50% { transform: translate(-1px, 1px) rotate(-1deg); }
-  // 60% { transform: translate(-1px, 1px) rotate(0deg); }
-  // 70% { transform: translate(1px, 1px) rotate(-1deg); }
-  // 80% { transform: translate(-1px, -1px) rotate(0deg); }
-  // 90% { transform: translate(1px, 1px) rotate(-1deg); }
-  // 100% { transform: translate(1px, -1px) rotate(0deg); }
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  2% { transform: translate(-1px, -2px) rotate(-1deg); }
-  4% { transform: translate(-3px, 0px) rotate(1deg); }
-  6% { transform: translate(3px, 2px) rotate(0deg); }
-  8% { transform: translate(1px, -1px) rotate(1deg); }
-  10% { transform: translate(-1px, 2px) rotate(-1deg); }
-  12% { transform: translate(-3px, 1px) rotate(0deg); }
-  14% { transform: translate(3px, 1px) rotate(-1deg); }
-  16% { transform: translate(-1px, -1px) rotate(1deg); }
-  18% { transform: translate(1px, 2px) rotate(0deg); }
-  20% { transform: translate(1px, -2px) rotate(-1deg); }
-  22%, 100% { transform: translate(0, 0) rotate(0deg); }
 }
 
 @keyframes fastshake {

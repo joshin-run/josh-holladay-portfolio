@@ -140,8 +140,6 @@ export default {
       &:hover {
         border: 3px solid #f57f00;
         color: #f57f00;
-        // border: 3px solid #52acff;
-        // color: #52acff;
       }
     }
   }

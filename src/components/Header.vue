@@ -1,6 +1,5 @@
 <template>
   <div class="header">
-    <!-- <img class="logo" src="@/assets/icons/icon-j.png" /> -->
     <Logo />
     <Nav />
   </div>
@@ -16,16 +15,6 @@ export default {
     Logo,
     Nav,
   },
-  // computed: {
-  //     isTrue () {
-  //         return this.$store.getters.isTrue
-  //     }
-  // }
-  // methods: {
-  //     async toggleMe() {
-  //         await this.$store.dispatch('toggle')
-  //     }
-  // }
 };
 </script>
 <style scoped>
