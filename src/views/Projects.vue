@@ -92,7 +92,7 @@ export default {
       ],
       developmentProjects: [
         {
-          imgSrc: 'portfolio',
+          imgSrc: 'portfolio2021',
           title: 'Portfolio',
           stack: 'JavaScript / Vue / Sass / Responsive / Web',
           description: 'A project representing the latest development skills using the most approachable JavaScript framework, Vue.js. With a minimalistic approach, using the most favored color scheme and other stylistic preferences, this website implementation represents the character of its creator.',
