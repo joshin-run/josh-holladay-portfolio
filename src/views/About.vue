@@ -3,12 +3,12 @@
     <div class="content-wrapper">
       <Title
         :title="'About'"
-        :color="'#303030'"
+        :color="'#2E1F27'"
         :id="'about'"
       />
       <div class="about-content">
         <div class="avatar">
-          <img src="@/assets/avatar-portfolio.png" />
+          <img src="@/assets/avatar-portfolio-5.png" />
         </div>
         <div class="content-container">
           <div class="content" v-for="(content,index) in contents" :key="index">
@@ -56,7 +56,7 @@ export default {
 .about {
   display: flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #00F9F9;
+  background-color: #FFFFFF;
   color: #626262;
   .avatar {
     margin: 10px 0 50px 0;

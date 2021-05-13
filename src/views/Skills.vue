@@ -3,9 +3,10 @@
     <div class="content-wrapper">
       <Title
         :title="'Skills'"
-        :color="'#626262'"
+        :color="'#F9F9ED'"
         :id="'skills'"
       />
+      <!-- :color="'#23527e'" -->
       <div
         v-for="(category,index) in categories"
         :key="index"
@@ -115,13 +116,17 @@ export default {
 
 <style lang="scss" scoped>
 .skills {
-  background-color: #303030;
+  // background-color: #F9F9ED;
+  background-color: #92828D;
+  // background-color: #303030;
+  // background-color: #fffcda;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   .category-container {
     margin-bottom: 20px;
   }
   .category {
-    color: #466780;
+    color: #F9F9ED;
+    // color: #23527e;
     font-weight: 500;
     font-size: 2.35rem;
     margin-bottom: 20px;
@@ -129,18 +134,20 @@ export default {
   .skill {
     display: inline-block;
     p {
-      border: 3px solid #3481c9;
+      border: 3px solid #F9F9ED;
+      // border: 3px solid #909090;
+      // border: 3px solid #8c8c8c;
       border-radius: 50px;
-      color: #3481c9;
+      color: #F9F9ED;
       font-size: .75rem;
       margin: 5px 3px;
       padding: 10px 18px;
       font-weight: 600;
       transition: 0.35s ease-in-out;
-      &:hover {
-        border: 3px solid #f57f00;
-        color: #f57f00;
-      }
+      // &:hover {
+      //   border: 3px solid #e82e00;
+      //   color: #e82e00;
+      // }
     }
   }
 }

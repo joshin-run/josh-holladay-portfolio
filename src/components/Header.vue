@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .header {
   box-shadow: none !important;
-  background-color: #83c4ff;
+  background-color: #83C4FF;
   height: 60px;
   padding: 15px 0;
   display: flex;

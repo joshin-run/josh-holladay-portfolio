@@ -4,7 +4,7 @@
       <div>
         <Title
           :title="'Design'"
-          :color="'#303030'"
+          :color="'#2E1F27'"
           :id="'design'"
         />
       </div>
@@ -26,7 +26,7 @@
       <div id="development">
         <Title
           :title="'Development'"
-          :color="'#303030'"
+          :color="'#2E1F27'"
           :id="'development'"
         />
       </div>
