@@ -29,7 +29,7 @@ export default {
     .proj-img {
         width: 100%;
         height: auto;
-        border-radius: 6px;
+        border-radius: 8px;
         box-shadow: 0 18px 16px -13px rgb(0,0,0,0.7);
         transition: 0.5s ease-in-out;
         &:hover {
