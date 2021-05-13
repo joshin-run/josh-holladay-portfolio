@@ -22,7 +22,7 @@ export default {
   box-shadow: none !important;
   background-color: #83c4ff;
   height: 60px;
-  padding: 15px 0;
+  padding: 15px 13px 15px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
