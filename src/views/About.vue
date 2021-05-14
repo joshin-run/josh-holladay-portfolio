@@ -3,12 +3,12 @@
     <div class="content-wrapper">
       <Title
         :title="'About'"
-        :color="'#303030'"
+        :color="'#2D3142'"
         :id="'about'"
       />
       <div class="about-content">
         <div class="avatar">
-          <img src="@/assets/avatar-portfolio.png" />
+          <img src="@/assets/avatar-portfolio-no-border.png" />
         </div>
         <div class="content-container">
           <div class="content" v-for="(content,index) in contents" :key="index">
@@ -56,8 +56,9 @@ export default {
 .about {
   display: flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #00F9F9;
-  color: #626262;
+  background-color: #E2FF99;
+  // background-color: #FBFFF1;
+  // background-color: #58EEE7;
   .avatar {
     margin: 10px 0 50px 0;
     display: flex;
@@ -77,6 +78,7 @@ p.title {
   margin-bottom: 20px;
 }
 p.text {
+  color: #2e576f;
   margin-bottom: 15px;
   line-height: 1.5;
 }
@@ -99,6 +101,9 @@ p.text {
 @media only screen and (min-width: 900px) {
   .box-2 {
     border-left: 2px solid rgb(235, 242, 255);
+  }
+  p.text {
+    font-size: 1.15rem;
   }
 }
 </style>

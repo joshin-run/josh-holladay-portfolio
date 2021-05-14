@@ -64,15 +64,17 @@ export default {
 .nav-link {
   text-decoration: none;
   margin-right: 30px;
-  color: black;
+  // color: black;
   text-transform: uppercase;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 0.95rem;
   color: #ffffff;
-  transition: 0.5s ease-in-out;
-  &:hover {
-    color: #00f9f9;
-  }
+  transition: 0.1s ease-in-out;
+  // &:hover {
+  //   // color: #86dbff;
+  //   border-left: 1px solid rgba(255,255,255);
+  //   // padding-bottom: 3px;
+  // }
 }
 .menu-icon {
   height: 34px;

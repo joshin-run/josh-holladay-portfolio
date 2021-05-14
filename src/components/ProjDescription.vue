@@ -26,7 +26,7 @@ export default {
         max-width: 600px;
     }
     .title {
-        color: #303030;
+        color: #2D3142;
         font-weight: 500;
         font-size: 1.35rem;
         margin-bottom: 15px;
@@ -38,12 +38,12 @@ export default {
         margin-bottom: 15px;
     }
     .description {
-        color: #626262;
+        color: #2e576f;
         line-height: 1.5;
         margin-bottom: 25px;
     }
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
     .proj-description {
         .title {
             font-size: 2rem;

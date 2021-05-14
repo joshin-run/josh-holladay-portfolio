@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <img class="logo-kit" src="@/assets/j-shadow-name-2.png" />
+    <img class="logo-kit" src="@/assets/main-logo-dark.png" />
     <p class="quote">{{quote}}</p>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 #home {
-  background-color: #83C4FF;
+  background-color: #47A6FF;
   height: 100vh;
   display: flex;
   flex-direction: column;
