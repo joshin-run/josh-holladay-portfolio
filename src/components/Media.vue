@@ -77,7 +77,7 @@ export default {
 }
 .media-wrapper.center {
   justify-content: center;
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .icon-link {

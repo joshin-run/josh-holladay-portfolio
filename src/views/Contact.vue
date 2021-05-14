@@ -102,9 +102,6 @@ p.text {
   margin-bottom: 15px;
   line-height: 1.5;
 }
-.center {
-  margin-left: 20px;
-}
 
 @keyframes fastshake {
   0% {
