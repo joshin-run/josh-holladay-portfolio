@@ -61,6 +61,7 @@ export default {
     align-items: center;
     img {
       height: 175px;
+      width: 175px;
       animation: fastshake 3s ease both;
       animation-iteration-count: infinite;
       margin-bottom: 10px;
@@ -106,6 +107,7 @@ p.text {
     .email-container {
       img {
         height: 235px;
+        width: 235px;
       }
     }
   }
