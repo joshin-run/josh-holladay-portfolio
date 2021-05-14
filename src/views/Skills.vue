@@ -117,9 +117,9 @@ export default {
 <style lang="scss" scoped>
 .skills {
   // background-color: #F9F9ED;
-  background-color: #92828D;
+  // background-color: #92828D;
   // background-color: #303030;
-  // background-color: #fffcda;
+  background-color: #92828D;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   .category-container {
     margin-bottom: 20px;
@@ -134,11 +134,10 @@ export default {
   .skill {
     display: inline-block;
     p {
-      border: 3px solid #F9F9ED;
-      // border: 3px solid #909090;
-      // border: 3px solid #8c8c8c;
+      border: 3px solid #2696ff;
+      // background: #d1e8ff;
       border-radius: 50px;
-      color: #F9F9ED;
+      color: #2696ff;
       font-size: .75rem;
       margin: 5px 3px;
       padding: 10px 18px;
