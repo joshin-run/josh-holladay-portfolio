@@ -42,6 +42,7 @@ export default {
   }
   .quote {
     font-size: 1.5rem;
+    max-width: unset;
   }
 }
 </style>
