@@ -53,6 +53,7 @@ export default {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 10px;
 }
 .nav-links {
   display: flex;
@@ -64,17 +65,16 @@ export default {
 .nav-link {
   text-decoration: none;
   margin-right: 30px;
-  // color: black;
   text-transform: uppercase;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 0.95rem;
   color: #ffffff;
   transition: 0.1s ease-in-out;
-  // &:hover {
-  //   // color: #86dbff;
-  //   border-left: 1px solid rgba(255,255,255);
-  //   // padding-bottom: 3px;
-  // }
+  letter-spacing: 1px;
+  &:hover {
+    // color: #bbdeff;
+  opacity: .9;
+}
 }
 .menu-icon {
   height: 34px;

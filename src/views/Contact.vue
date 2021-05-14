@@ -60,7 +60,7 @@ export default {
     justify-content: center;
     align-items: center;
     img {
-      width: 175px;
+      height: 175px;
       animation: fastshake 3s ease both;
       animation-iteration-count: infinite;
       margin-bottom: 10px;
@@ -76,7 +76,7 @@ a {
 p.title {
   font-weight: 500;
   color: #FFFFFF;
-  font-size: 1.35rem;
+  font-size: 1.75rem;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -102,25 +102,18 @@ p.text {
 }
 
 @media only screen and (min-width: 900px) {
-  #about {
-    .email-icon {
-      flex-direction: row;
+  .contact {
+    .email-container {
       img {
-        width: 275px;
+        height: 235px;
       }
     }
   }
   p.title {
-    font-size: 2rem;
+    font-size: 2.35rem;
   }
   p.text {
     font-size: 1.15rem;
   }
-}
-@media only screen and (min-width: 900px) {
-  .box-2 {
-    border-left: 2px solid rgb(235, 242, 255);
-  }
-
 }
 </style>

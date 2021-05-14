@@ -61,6 +61,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-right: 12px;
 }
 
 .media-wrapper.flex-end {
@@ -82,7 +83,7 @@ export default {
   font-size: 1.25rem;
   color: #ffffff;
   &:hover {
-    color: #00f9f9;
+    opacity: .9;
   }
   .icon-normal {
     height: 30px;
