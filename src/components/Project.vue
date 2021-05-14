@@ -7,7 +7,7 @@
       :description="description"
     />
     <a :href="btnLink" target="_blank">
-      <button class="btn">{{btnText.toUpperCase()}}</button>
+      <button class="btn">{{ btnText.toUpperCase() }}</button>
     </a>
   </div>
 </template>
@@ -31,8 +31,8 @@ export default {
     btnLink: String,
     btnText: {
       type: String,
-      default: 'View More'
-    }
+      default: "View More",
+    },
   },
 };
 </script>

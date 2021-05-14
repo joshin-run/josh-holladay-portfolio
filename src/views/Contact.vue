@@ -1,24 +1,24 @@
 <template>
   <div class="contact page-wrapper">
     <div class="content-wrapper">
-      <Title
-        :title="'Contact'"
-        :color="'#FFFFFF'"
-        :id="'contact'"
-      />
+      <Title :title="'Contact'" :color="'#FFFFFF'" :id="'contact'" />
       <div class="contact-content">
         <div class="email-icon email-container">
           <a href="mailto:iamjoshholladay@gmail.com" target="_blank">
             <img src="@/assets/icons/icon-em-lg.png" />
           </a>
           <a href="mailto:iamjoshholladay@gmail.com" target="_blank">
-            <p class="title">{{title}}</p>
+            <p class="title">{{ title }}</p>
           </a>
         </div>
         <div class="content-container">
-          <div class="content" v-for="(content,index) in contents" :key="index">
-            <p class="text">{{content.text1}}</p>
-            <p class="text">{{content.text2}}</p>
+          <div
+            class="content"
+            v-for="(content, index) in contents"
+            :key="index"
+          >
+            <p class="text">{{ content.text1 }}</p>
+            <p class="text">{{ content.text2 }}</p>
           </div>
         </div>
       </div>
@@ -27,32 +27,33 @@
 </template>
 
 <script>
-import Title from '../components/Title.vue'
+import Title from "../components/Title.vue";
 
 export default {
   components: {
-    Title
+    Title,
   },
   data() {
     return {
-      title: 'Send me an email.',
+      title: "Send me an email.",
       contents: [
         {
-          text1: 'Send me an email with any questions or to request my resume. I am currently looking to pick up additional freelance projects. I\'d love to chat about your next GREAT IDEA to see if we might be a fit.',
-          text2: 'Thank you for your consideration and let\'s talk soon!',
+          text1:
+            "Send me an email with any questions or to request my resume. I am currently looking to pick up additional freelance projects. I'd love to chat about your next GREAT IDEA to see if we might be a fit.",
+          text2: "Thank you for your consideration and let's talk soon!",
         },
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .contact {
   display: flex;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #47A6FF;
-  color: #FFFFFF;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #47a6ff;
+  color: #ffffff;
   .email-container {
     margin: 10px 0 50px 0;
     display: flex;
@@ -76,7 +77,7 @@ a {
 }
 p.title {
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.75rem;
   margin: 0;
   padding: 0;
@@ -88,18 +89,43 @@ p.text {
 }
 
 @keyframes fastshake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  1% { transform: translate(-1px, -2px) rotate(-1deg); }
-  2% { transform: translate(-3px, 0px) rotate(1deg); }
-  3% { transform: translate(3px, 2px) rotate(0deg); }
-  4% { transform: translate(1px, -1px) rotate(1deg); }
-  5% { transform: translate(-1px, 2px) rotate(-1deg); }
-  6% { transform: translate(-3px, 1px) rotate(0deg); }
-  7% { transform: translate(3px, 1px) rotate(-1deg); }
-  8% { transform: translate(-1px, -1px) rotate(1deg); }
-  9% { transform: translate(1px, 2px) rotate(0deg); }
-  10% { transform: translate(1px, -2px) rotate(-1deg); }
-  11%, 100% { transform: translate(0, 0) rotate(0deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  1% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  2% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  3% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  4% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  5% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  6% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  7% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  8% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  9% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  10% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+  11%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 @media only screen and (min-width: 900px) {

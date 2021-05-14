@@ -72,9 +72,8 @@ export default {
   transition: 0.1s ease-in-out;
   letter-spacing: 1px;
   &:hover {
-    // color: #bbdeff;
-  opacity: .9;
-}
+    opacity: 0.9;
+  }
 }
 .menu-icon {
   height: 34px;

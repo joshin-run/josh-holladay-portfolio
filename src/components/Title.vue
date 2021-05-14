@@ -13,12 +13,12 @@ export default {
     title: String,
     color: {
       type: String,
-      default: '#000000'
+      default: "#000000",
     },
     id: {
       type: String,
-      default: ''
-    }
+      default: "",
+    },
   },
 };
 </script>

@@ -52,8 +52,6 @@ export default {
 
 .sidebar-panel {
   background-color: #303135;
-  /* background-color: #a1d2ff; */
-  /* border-right: 3px solid #76beff; */
   position: fixed;
   left: 0;
   top: 0;

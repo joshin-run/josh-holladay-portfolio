@@ -57,7 +57,7 @@ export default {
   text-transform: uppercase;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.75rem;
-  color: #47A6FF;
+  color: #47a6ff;
   transition: 0.5s ease-in-out;
   &:hover {
     color: #00f9f9;

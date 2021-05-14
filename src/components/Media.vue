@@ -2,7 +2,10 @@
   <div class="media-wrapper">
     <div v-for="(icon, index) in icons" :key="index">
       <a class="icon-link" :href="icon.link" :alt="icon.type" target="_blank">
-        <img :class="`icon-${size}`" :src="require(`../assets/icons/${icon.img}.png`)" />
+        <img
+          :class="`icon-${size}`"
+          :src="require(`../assets/icons/${icon.img}.png`)"
+        />
       </a>
     </div>
   </div>
@@ -14,7 +17,7 @@ export default {
   props: {
     size: {
       type: String,
-      default: 'normal',
+      default: "normal",
     },
   },
   data() {
@@ -83,7 +86,7 @@ export default {
   font-size: 1.25rem;
   color: #ffffff;
   &:hover {
-    opacity: .9;
+    opacity: 0.9;
   }
   .icon-normal {
     height: 30px;
