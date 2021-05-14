@@ -34,6 +34,7 @@ export default {
   font-size: 1.25rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
+  max-width: 360px;
 }
 @media only screen and (min-width: 900px) {
   .logo-kit {

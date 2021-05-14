@@ -4,3 +4,8 @@
 .reverse-column {
   flex-direction: column-reverse;
 }
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+}

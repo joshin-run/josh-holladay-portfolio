@@ -75,6 +75,10 @@ export default {
   flex-flow: wrap;
   margin-top: 3rem;
 }
+.media-wrapper.center {
+  justify-content: center;
+  padding-left: 20px;
+}
 
 .icon-link {
   text-decoration: none;

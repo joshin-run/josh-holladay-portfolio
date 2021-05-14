@@ -11,6 +11,9 @@
             <p class="title">{{ title }}</p>
           </a>
         </div>
+        <div class="media-container flex-row-center">
+          <Media class="center" />
+        </div>
         <div class="content-container">
           <div
             class="content"
@@ -28,10 +31,12 @@
 
 <script>
 import Title from "../components/Title.vue";
+import Media from "../components/Media.vue";
 
 export default {
   components: {
     Title,
+    Media,
   },
   data() {
     return {
@@ -39,8 +44,9 @@ export default {
       contents: [
         {
           text1:
-            "Send me an email with any questions or to request my resume. I am currently looking to pick up additional freelance projects. I'd love to chat about your next GREAT IDEA to see if we might be a fit.",
-          text2: "Thank you for your consideration and let's talk soon!",
+            "Thank you for viewing my portfolio website. It's fun to work on and also takes some thought, elbow grease, and maybe even a little pixey dust.",
+          text2:
+            "I'd love to chat about your next GREAT IDEA to see if we might be a fit. Send me an email with any questions or to request my resume. I am currently looking to pick up additional freelance projects. Thanks for your consideration and let's talk soon!",
         },
       ],
     };
@@ -55,7 +61,7 @@ export default {
   background-color: #47a6ff;
   color: #ffffff;
   .email-container {
-    margin: 10px 0 50px 0;
+    margin: 10px 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,14 +73,23 @@ export default {
       animation-iteration-count: infinite;
       margin-bottom: 10px;
     }
+    a {
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+  }
+  .media-container {
+    margin-bottom: 30px;
   }
 }
 .content {
   margin-bottom: 40px;
 }
-a {
-  text-decoration: none;
+
+p {
+  margin: 0;
 }
+
 p.title {
   font-weight: 500;
   color: #ffffff;
@@ -86,6 +101,9 @@ p.title {
 p.text {
   margin-bottom: 15px;
   line-height: 1.5;
+}
+.center {
+  margin-left: 20px;
 }
 
 @keyframes fastshake {
