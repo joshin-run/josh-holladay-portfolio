@@ -64,6 +64,7 @@ export default {
     display: flex;
     justify-content: center;
     img {
+      height: 275px;
       width: 275px;
     }
   }
@@ -87,6 +88,7 @@ p.text {
     .avatar {
       flex-direction: row;
       img {
+        height: 400px;
         width: 400px;
       }
     }
