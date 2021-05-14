@@ -3,10 +3,9 @@
     <div class="content-wrapper">
       <Title
         :title="'Skills'"
-        :color="'#F9F9ED'"
+        :color="'#47A6FF'"
         :id="'skills'"
       />
-      <!-- :color="'#23527e'" -->
       <div
         v-for="(category,index) in categories"
         :key="index"
@@ -116,42 +115,40 @@ export default {
 
 <style lang="scss" scoped>
 .skills {
-  // background-color: #F9F9ED;
-  // background-color: #92828D;
-  // background-color: #303030;
-  background-color: #92828D;
+  background-color: #303135;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   .category-container {
     margin-bottom: 20px;
   }
   .category {
-    color: #F9F9ED;
-    // color: #23527e;
+    color: #17DED7;
     font-weight: 500;
-    font-size: 2.35rem;
+    font-size: 1.75rem;
     margin-bottom: 20px;
   }
   .skill {
     display: inline-block;
     p {
-      border: 3px solid #2696ff;
-      // background: #d1e8ff;
+      border: 3px solid #FF8600;
       border-radius: 50px;
-      color: #2696ff;
+      color: #FF8600;
       font-size: .75rem;
       margin: 5px 3px;
       padding: 10px 18px;
       font-weight: 600;
       transition: 0.35s ease-in-out;
       // &:hover {
-      //   border: 3px solid #e82e00;
-      //   color: #e82e00;
+      //   border: 3px solid #ffbd71;
+      //   color: #ffbd71;
       // }
     }
   }
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
   .skills {
+    .category {
+      font-size: 2.35rem;
+    }
     .skill {
       p {
         font-size: 1rem;

@@ -1,10 +1,10 @@
 <template>
-  <div id="projects" class="page-wrapper">
-    <div class="content-wrapper">
+  <div id="projects" class="page-wrapper-proj">
+    <div class="content-wrapper-proj design-section">
       <div>
         <Title
           :title="'Design'"
-          :color="'#2E1F27'"
+                  :color="'#2D3142'"
           :id="'design'"
         />
       </div>
@@ -22,11 +22,11 @@
         />
       </div>
     </div>
-    <div class="content-wrapper development">
+    <div class="content-wrapper-proj development-section">
       <div id="development">
         <Title
           :title="'Development'"
-          :color="'#2E1F27'"
+          :color="'#2D3142'"
           :id="'development'"
         />
       </div>
@@ -125,6 +125,16 @@ export default {
 #projects {
   display: flex;
   flex-direction: column;
+  .design-section,
+  .development-section {
+    padding: 50px 15px;
+  }
+  .design-section {
+    background-color: #FFFFFF;
+  }
+  .development-section {
+    background-color: #C7F9F7;
+  }
 }
 @media only screen and (min-width: 1201px) {
   #projects {
@@ -134,9 +144,6 @@ export default {
 @media only screen and (min-width: 900px) {
   #projects {
     flex-direction: row;
-  }
-  .development {
-    border-left: 2px solid rgb(235, 242, 255);
   }
 }
 </style>

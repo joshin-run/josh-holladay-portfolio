@@ -4,9 +4,17 @@
     padding: 50px 0;
     width: 100%;
 }
+.page-wrapper-proj {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .content-wrapper {
     max-width: 1200px;
     padding: 0 15px;
+}
+.content-wrapper-proj {
+  max-width: 1200px;
 }
 
 @media only screen and (min-width: 900px) {

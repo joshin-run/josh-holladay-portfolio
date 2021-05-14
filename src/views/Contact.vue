@@ -7,14 +7,16 @@
         :id="'contact'"
       />
       <div class="contact-content">
-        <div class="email-icon">
+        <div class="email-icon email-container">
           <a href="mailto:iamjoshholladay@gmail.com" target="_blank">
             <img src="@/assets/icons/icon-em-lg.png" />
+          </a>
+          <a href="mailto:iamjoshholladay@gmail.com" target="_blank">
+            <p class="title">{{title}}</p>
           </a>
         </div>
         <div class="content-container">
           <div class="content" v-for="(content,index) in contents" :key="index">
-            <p class="title">{{content.title}}</p>
             <p class="text">{{content.text1}}</p>
             <p class="text">{{content.text2}}</p>
           </div>
@@ -33,10 +35,10 @@ export default {
   },
   data() {
     return {
+      title: 'Send me an email.',
       contents: [
         {
-          title: 'CLICK THE ICON ABOVE . . .',
-          text1: 'I am currently looking to pick up additional freelance projects. Click the icon above to send me an email with any questions or to request my resume. I\'d love to chat about your next GREAT IDEA to see if we might be a fit.',
+          text1: 'Send me an email with any questions or to request my resume. I am currently looking to pick up additional freelance projects. I\'d love to chat about your next GREAT IDEA to see if we might be a fit.',
           text2: 'Thank you for your consideration and let\'s talk soon!',
         },
       ]
@@ -49,27 +51,35 @@ export default {
 .contact {
   display: flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #83C4FF;
+  background-color: #47A6FF;
   color: #FFFFFF;
-  .email-icon {
+  .email-container {
     margin: 10px 0 50px 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     img {
       width: 175px;
       animation: fastshake 3s ease both;
       animation-iteration-count: infinite;
+      margin-bottom: 10px;
     }
   }
 }
 .content {
   margin-bottom: 40px;
 }
+a {
+  text-decoration: none;
+}
 p.title {
   font-weight: 500;
   color: #FFFFFF;
   font-size: 1.35rem;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 p.text {
   margin-bottom: 15px;
@@ -104,12 +114,13 @@ p.text {
     font-size: 2rem;
   }
   p.text {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 }
 @media only screen and (min-width: 900px) {
   .box-2 {
     border-left: 2px solid rgb(235, 242, 255);
   }
+
 }
 </style>
