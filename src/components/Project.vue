@@ -15,6 +15,7 @@
 <script>
 import ProjImg from "./ProjImg.vue";
 import ProjDescription from "./ProjDescription.vue";
+
 export default {
   name: "Project",
   components: {
@@ -31,7 +32,7 @@ export default {
     btnLink: String,
     btnText: {
       type: String,
-      default: "View More",
+      default: "View More"
     },
   },
 };
